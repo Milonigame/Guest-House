@@ -1,17 +1,38 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
 header {
     height:100vh;
-    background: url('/holodnaya-rechka-1.jpg')no-repeat;
+    background: url('/holodnaya-rechka-2.jpg')no-repeat;
     background-size: cover;
     position: relative;
 }
 
-header:after{
+header:before{
     content:'';
     position: absolute;
     top:0;
     left:0;
     right:0;
     bottom: 0;
-    background: rgba(0,0,0,.5);
+    background: rgba(0,0,0,.3);
+
+}
+
+.center{
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+    color: white ;
+}
+
+.formWrapper{
+    background:#fff;
+    color:#222;
+    padding: 20px 10px;
 
 }
