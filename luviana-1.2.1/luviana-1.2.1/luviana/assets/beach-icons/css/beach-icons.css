@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "Beach Icons";
+  src:url("../fonts/beach-icons.eot");
+  src:url("../fonts/beach-icons.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/beach-icons.woff") format("woff"),
+    url("../fonts/beach-icons.ttf") format("truetype"),
+    url("../fonts/beach-icons.svg#beach-icons") format("svg");
+  font-weight: 400;
+  font-style: 400; 
+
+}
+
+.beach-icons, 
+[class^="icon-"]:before,
+[class*=" icon-"]:before {  
+  font-family: "Beach Icons";  
+  font-size: inherit;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.icon-01:before {
+  content: "a";
+}
+.icon-02:before {
+  content: "c";
+}
+.icon-14:before {
+  content: "d";
+}
+.icon-15:before {
+  content: "b";
+}
+.icon-03:before {
+  content: "e";
+}
+.icon-16:before {
+  content: "f";
+}
+.icon-04:before {
+  content: "g";
+}
+.icon-05:before {
+  content: "h";
+}
+.icon-06:before {
+  content: "i";
+}
+.icon-07:before {
+  content: "j";
+}
+.icon-08:before {
+  content: "k";
+}
+.icon-10:before {
+  content: "l";
+}
+.icon-09:before {
+  content: "m";
+}
+.icon-11:before {
+  content: "n";
+}
+.icon-13:before {
+  content: "o";
+}
+.icon-12:before {
+  content: "p";
+}

@@ -1,0 +1,567 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Luviana\n"
+"POT-Creation-Date: 2020-01-15 11:05+0200\n"
+"PO-Revision-Date: 2017-05-25 15:36+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: inc/tgmpa\n"
+
+#: 404.php:19 archive.php:20 inc/template-tags.php:200
+#: inc/template-tags.php:234
+msgid "Entry-header image"
+msgstr ""
+
+#: 404.php:20
+msgctxt "404 page title"
+msgid "404"
+msgstr ""
+
+#: 404.php:24
+msgctxt "404 page description"
+msgid "Unfortunately the page you were looking for could not be found."
+msgstr ""
+
+#: 404.php:30
+msgid "go to home page"
+msgstr ""
+
+#: comments.php:35
+#, php-format
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#: comments.php:41
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:67
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:32 inc/customizer.php:53
+#, php-format
+msgctxt "Default footer text, %1$s - blog name, %2$s - current year"
+msgid "%1$s &copy; %2$s All Rights Reserved"
+msgstr ""
+
+#: functions.php:54
+msgid "Primary"
+msgstr ""
+
+#: functions.php:55
+msgid "Header Socials"
+msgstr ""
+
+#: functions.php:56
+msgid "Footer"
+msgstr ""
+
+#: functions.php:104
+msgid "White"
+msgstr ""
+
+#: functions.php:109
+msgid "Black"
+msgstr ""
+
+#: functions.php:114
+msgid "Grey"
+msgstr ""
+
+#: functions.php:119
+msgid "Light Grey"
+msgstr ""
+
+#: functions.php:124
+msgid "Dark Grey"
+msgstr ""
+
+#: functions.php:129
+msgid "Gold"
+msgstr ""
+
+#: functions.php:134
+msgid "Blue"
+msgstr ""
+
+#: functions.php:139
+msgid "Dark Blue"
+msgstr ""
+
+#: functions.php:185
+msgid "Footer bottom 1"
+msgstr ""
+
+#: functions.php:187 functions.php:196 functions.php:205 functions.php:214
+#: functions.php:223
+msgid "Add widgets here."
+msgstr ""
+
+#: functions.php:194
+msgid "Footer bottom 2"
+msgstr ""
+
+#: functions.php:203
+msgid "Footer bottom 3"
+msgstr ""
+
+#: functions.php:212
+msgid "Footer bottom 4"
+msgstr ""
+
+#: functions.php:221
+msgid "Front page"
+msgstr ""
+
+#: functions.php:230
+msgid "Page sidebar"
+msgstr ""
+
+#: functions.php:232
+msgid "Add widgets here. Widgets for page template With Sidebar."
+msgstr ""
+
+#: functions.php:381
+msgctxt "Noto Serif font: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:390
+msgctxt "Open Sans font: on or off"
+msgid "on"
+msgstr ""
+
+#: header.php:25
+msgid "Skip to content"
+msgstr ""
+
+#: inc/customizer-colors.php:47
+msgid "Light Header Text Color"
+msgstr ""
+
+#: inc/customizer-colors.php:60
+msgid "Accent Color"
+msgstr ""
+
+#: inc/customizer-colors.php:73
+msgid "Secondary Color"
+msgstr ""
+
+#: inc/customizer-front-page.php:13
+msgid "Front Page Slider"
+msgstr ""
+
+#: inc/customizer-front-page.php:22
+msgid "Enable one-line text fitting for the title"
+msgstr ""
+
+#: inc/customizer-front-page.php:33
+msgid "Enable slideshow"
+msgstr ""
+
+#: inc/customizer-front-page.php:44
+msgid "Slideshow speed"
+msgstr ""
+
+#: inc/customizer-front-page.php:59
+msgid "Use fade animation effect"
+msgstr ""
+
+#: inc/customizer-front-page.php:70
+msgid "Animation speed"
+msgstr ""
+
+#: inc/customizer-front-page.php:86
+msgid "Enable video as a first slide"
+msgstr ""
+
+#: inc/customizer-front-page.php:98
+msgid "Autoplay video"
+msgstr ""
+
+#: inc/customizer-front-page.php:110
+msgid "Mute video"
+msgstr ""
+
+#: inc/customizer-front-page.php:122
+msgid "Loop video"
+msgstr ""
+
+#: inc/customizer-front-page.php:134
+msgid "Video"
+msgstr ""
+
+#: inc/customizer-front-page.php:144
+msgid "Video Poster"
+msgstr ""
+
+#: inc/customizer-front-page.php:157
+msgid "Video Title"
+msgstr ""
+
+#: inc/customizer-front-page.php:171
+msgid "Video Caption"
+msgstr ""
+
+#: inc/customizer.php:30
+msgid "Theme Options"
+msgstr ""
+
+#: inc/customizer.php:34
+msgid "Footer Options"
+msgstr ""
+
+#: inc/customizer.php:46
+msgid "Show Footer Text?"
+msgstr ""
+
+#: inc/customizer.php:62
+msgid "Footer Text"
+msgstr ""
+
+#: inc/customizer.php:63
+#, php-format
+msgid ""
+"Use %1$s to insert the blog name, %2$s to insert the current year. Doesn`t "
+"work for Live Preview."
+msgstr ""
+
+#: inc/customizer.php:71
+msgid "Header Options"
+msgstr ""
+
+#: inc/customizer.php:80
+msgid "Show header image"
+msgstr ""
+
+#: inc/customizer.php:91
+msgid "Header Image"
+msgstr ""
+
+#: inc/customizer.php:98
+msgid "Blog Options"
+msgstr ""
+
+#: inc/customizer.php:109
+msgid "Blog layout"
+msgstr ""
+
+#: inc/customizer.php:111
+msgid "Default"
+msgstr ""
+
+#: inc/customizer.php:112
+msgid "Grid"
+msgstr ""
+
+#: inc/customizer.php:113
+msgid "Grid 2"
+msgstr ""
+
+#: inc/customizer.php:118
+msgid "Site Options"
+msgstr ""
+
+#: inc/customizer.php:129
+msgid "Site layout"
+msgstr ""
+
+#: inc/customizer.php:131
+msgid "Boxed"
+msgstr ""
+
+#: inc/customizer.php:132
+msgid "Wide"
+msgstr ""
+
+#: inc/customizer.php:142
+msgid "Dark Logo"
+msgstr ""
+
+#: inc/customizer.php:151
+msgid "Select Dark Logo"
+msgstr ""
+
+#: inc/demo-import.php:10
+msgid "Important note before importing sample data."
+msgstr ""
+
+#: inc/demo-import.php:11
+msgid "Data import is generally not immediate and can take up to 10 minutes."
+msgstr ""
+
+#: inc/demo-import.php:12
+msgid ""
+"After you import this demo, you will have to configure the Instagram API "
+"key and Google Maps API key separately."
+msgstr ""
+
+#: inc/mphb-functions.php:101 inc/template-tags.php:265
+#: inc/template-tags.php:280
+msgid "Previous"
+msgstr ""
+
+#: inc/mphb-functions.php:102 inc/template-tags.php:259
+#: inc/template-tags.php:260 inc/template-tags.php:281
+msgid "Next"
+msgstr ""
+
+#: inc/template-tags.php:56
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:69
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:126 template-parts/content-front-page.php:37
+#: template-parts/content-page.php:36
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: inc/template-tags.php:351
+#, php-format
+msgid "More Info<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: inc/updater/theme-updater-admin.php:244
+msgid "Error"
+msgstr ""
+
+#: inc/updater/theme-updater-admin.php:275
+#: inc/updater/theme-updater-admin.php:322
+#: inc/updater/theme-updater-admin.php:375
+msgid "An error occurred, please try again."
+msgstr ""
+
+#: inc/updater/theme-updater-admin.php:289
+#, php-format
+msgid "Your license key expired on %s."
+msgstr ""
+
+#: inc/updater/theme-updater-admin.php:296
+msgid "Your license key has been disabled."
+msgstr ""
+
+#: inc/updater/theme-updater-admin.php:301
+msgid "Invalid license."
+msgstr ""
+
+#: inc/updater/theme-updater-admin.php:307
+msgid "Your license is not active for this URL."
+msgstr ""
+
+#: inc/updater/theme-updater-admin.php:312
+#, php-format
+msgid "This appears to be an invalid license key for %s."
+msgstr ""
+
+#: inc/updater/theme-updater-admin.php:317
+msgid "Your license key has reached its activation limit."
+msgstr ""
+
+#: inc/updater/theme-updater.php:36
+msgid "Theme License"
+msgstr ""
+
+#: inc/updater/theme-updater.php:37
+msgid "Enter your theme license key."
+msgstr ""
+
+#: inc/updater/theme-updater.php:38
+msgid "License Key"
+msgstr ""
+
+#: inc/updater/theme-updater.php:39
+msgid "License Action"
+msgstr ""
+
+#: inc/updater/theme-updater.php:40
+msgid "Deactivate License"
+msgstr ""
+
+#: inc/updater/theme-updater.php:41
+msgid "Activate License"
+msgstr ""
+
+#: inc/updater/theme-updater.php:42 inc/updater/theme-updater.php:55
+msgid "License status is unknown."
+msgstr ""
+
+#: inc/updater/theme-updater.php:43
+msgid "Renew?"
+msgstr ""
+
+#: inc/updater/theme-updater.php:44
+msgid "unlimited"
+msgstr ""
+
+#: inc/updater/theme-updater.php:45
+msgid "License key is active."
+msgstr ""
+
+#: inc/updater/theme-updater.php:46
+#, php-format
+msgid "Expires %s."
+msgstr ""
+
+#: inc/updater/theme-updater.php:47
+msgid "Lifetime License."
+msgstr ""
+
+#: inc/updater/theme-updater.php:48
+#, php-format
+msgid "You have %1$s / %2$s sites activated."
+msgstr ""
+
+#: inc/updater/theme-updater.php:49
+#, php-format
+msgid "License key expired %s."
+msgstr ""
+
+#: inc/updater/theme-updater.php:50
+msgid "License key has expired."
+msgstr ""
+
+#: inc/updater/theme-updater.php:51
+msgid "License keys do not match."
+msgstr ""
+
+#: inc/updater/theme-updater.php:52
+msgid "License is inactive."
+msgstr ""
+
+#: inc/updater/theme-updater.php:53
+msgid "License key is disabled."
+msgstr ""
+
+#: inc/updater/theme-updater.php:54
+msgid "Site is inactive."
+msgstr ""
+
+#: inc/updater/theme-updater.php:56
+msgid ""
+"Updating this theme will lose any customizations you have made. 'Cancel' "
+"to stop, 'OK' to update."
+msgstr ""
+
+#: inc/updater/theme-updater.php:57
+#, php-format
+msgid ""
+"<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox"
+"\" title=\"%4s\">Check out what's new</a> or <a href=\"%5$s\"%6$s>update "
+"now</a>."
+msgstr ""
+
+#: search.php:22
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:8
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:9
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: searchform.php:11
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: template-parts/content-front-page.php:24
+#: template-parts/content-loop.php:64
+#: template-parts/content-mphb_room_type.php:36
+#: template-parts/content-page.php:23 template-parts/content.php:34
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content-grid-2-loop.php:20
+#: template-parts/content-grid-loop.php:20 template-parts/content-loop.php:22
+msgid "Featured"
+msgstr ""
+
+#: template-parts/content-loop.php:53
+#: template-parts/content-mphb_room_type.php:25 template-parts/content.php:23
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:24
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:37
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Luviana"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://motopress.com/products/luviana/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Luviana is a Gutenberg theme perfectly fitting for hotels, rental "
+"accommodations and services, boarding houses or hostels. The theme "
+"comprises an integrated online booking plugin that allows conducting "
+"reservations of your rental properties and receiving online payments."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "MotoPress"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://motopress.com/"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Front Page"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "With Sidebar"
+msgstr ""

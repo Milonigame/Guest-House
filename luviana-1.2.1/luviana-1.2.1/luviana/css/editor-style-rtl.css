@@ -1,0 +1,18 @@
+.wp-block-quote, .wp-block-quote.is-style-large {
+  padding: 5rem 9.375rem 5rem 6.25rem;
+}
+
+.wp-block-quote:not(.is-large):not(.is-style-large) {
+  padding: 5rem 9.375rem 5rem 6.25rem;
+}
+
+.wp-block-quote::before, .wp-block-quote.is-style-large::before {
+  right: 6.25rem;
+  left: auto;
+}
+
+.wp-block-quote cite,
+.wp-block-quote.is-style-large cite {
+  margin-left: auto;
+  margin-right: -3.125rem;
+}
