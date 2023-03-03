@@ -36,3 +36,11 @@ header:before{
     padding: 20px 10px;
 
 }
+
+.conteiner-fluid{
+    max-width:1920px;
+    margin: 0 auto;
+    padding:0 10px;
+
+
+}
