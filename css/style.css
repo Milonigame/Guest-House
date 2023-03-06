@@ -1,3 +1,10 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;;
+}
+
+
 body{
     font-family: 'Poppins', sans-serif;
     font-family: 'Roboto', sans-serif;
@@ -41,6 +48,24 @@ header:before{
     max-width:1920px;
     margin: 0 auto;
     padding:0 10px;
+
+
+}
+
+.collection__item{
+    padding: 12px;
+    display: inline-block;
+    justify-content: space-between;
+}
+
+
+
+.collection__video{
+ position: absolute;
+ 
+ padding:12px;
+ padding-right: 6px;
+
 
 
 }
