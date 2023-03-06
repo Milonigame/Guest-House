@@ -58,24 +58,41 @@ header:before{
     justify-content: space-between;
 }
 
-
+.title__room{
+    text-align: center;
+}
 
 .collection__video{
  position: absolute;
  
  padding:12px;
  padding-right: 6px;
+ 
 
 
 
 }
+
+
+/* анамиция видео */
+
+
+
+
+
+/*  */
+
+
 .table{
     text-align: center;
+    background:rgb(145, 232, 247);
+    color : black;
+    border: solid rgb(128, 187, 255) ;
+    border-radius: 20px;
 }
+
 .head__table{
     text-align: center;
 }
 
-.title__room{
-    text-align: center;
-}
+
