@@ -69,3 +69,13 @@ header:before{
 
 
 }
+.table{
+    text-align: center;
+}
+.head__table{
+    text-align: center;
+}
+
+.title__room{
+    text-align: center;
+}
