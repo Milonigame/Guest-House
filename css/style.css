@@ -8,7 +8,7 @@
 body{
     font-family: 'Poppins', sans-serif;
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 14px;
     line-height: 17px;
     color: #131313;
@@ -56,9 +56,10 @@ h1, p{
 
 .menu__list li a{
  display: flex;
- color:black;
+ color:azure;
  opacity: 0.6;
  text-decoration: none;
+
  
 }
 
@@ -67,6 +68,7 @@ h1, p{
 header{
  display: flex;
  justify-content: space-between;
+ 
 }
 
 /* .menu__list{
@@ -77,15 +79,24 @@ header{
 
 .menu__link{
     text-transform: uppercase;
+    
    
 }
 
 .menu__link:hover{
     background-color:aliceblue;
-    color: aquamarine;
+    color:darkblue;
+   
+}
+.col-sm-8{
+    color:beige;
+    text-shadow: 2px 2px 2px #000;
+
 }
 
-
+.tr{
+    font-size: 16px;
+}
 
 ul{
     list-style:none;
@@ -112,12 +123,14 @@ a{
     transform: translateY(-50%);
     color: white ;
     margin-top: -100px;
+    
 }
 
 .formWrapper{
     background:#fff;
     color:#222;
     padding: 20px 10px;
+    background-image: linear-gradient(to left, rgb(157, 248, 255), rgb(155, 155, 255) );
 
 }
 
