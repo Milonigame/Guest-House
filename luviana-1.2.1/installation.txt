@@ -1,7 +1,0 @@
-1. Install the theme via FTP or by uploading it via WordPress.
-
-2. Install required plugins.
-
-3. If you create a new website, you may import sample data in Appearance > Import Demo Data.
-
-If your site is already filled with content, follow documentation to configure your theme.

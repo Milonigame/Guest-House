@@ -62,9 +62,17 @@ header{
 }
 
 
+
 .menu__link{
     text-transform: uppercase;
+   
 }
+
+.menu__link:hover{
+    background-color:aliceblue;
+    color: aquamarine;
+}
+
 
 
 ul{

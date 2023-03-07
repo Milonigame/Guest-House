@@ -1,64 +1,35 @@
-$('.telegram-form').on('submit', function (event) {
-
-    event.stopPropagation();
-    event.preventDefault();
-
-    let form = this,
-        submit = $('.submit', form),
-        data = new FormData(),
-        files = $('input[type=file]')
+const TOKEN = "6190534304:AAExBy7_bP4uHfQlObJTrLU60CT-hCtkDcY",
+     CHAT_ID = "-1001777196683",
+     URL_API=`https://api.telegram.org/bot${ TOKEN }/sendMessage`,
+     success=document.getElementById('success');
 
 
-    $('.submit', form).val('Отправка...');
-    $('input, textarea', form).attr('disabled','');
 
-    data.append( 'name', 		$('[name="name"]', form).val() );
-    data.append( 'phone', 		$('[name="phone"]', form).val() );
-    data.append( 'email', 		$('[name="email"]', form).val() );
+document.getElementById('tg').addEventListener('submit', function (e){
+    e.preventDefault();
+   
+    let message =`<b>Заявка с сайта!</b>\n`;
+        message +=`<b>Отправитель:</b> ${this.name.value}\n`;
+        message +=`<b>Почта:</b> ${this.email.value}\n`;
+        message +=`<b>Номер телефона:</b> ${this.phone.value}`;
+        
+        window.axios.post(URL_API, {
+            chat_id:CHAT_ID,
+            parse_mode:'html',
+            text:message
+        })
+        .then((res)=>{
+            this.name.value="";
+            this.email.value="";
+            this.phone.value="";
+            success.innerHTML="сообщение отправлено!";
+            success.style.display="block";
+        })
+        .catch((err)=>{
+            console.warn('err');
+        })
+        .finally(()=>{
+            console.log('Конец');
+        });
 
-
-    files.each(function (key, file) {
-        let cont = file.files;
-        if ( cont ) {
-            $.each( cont, function( key, value ) {
-                data.append( key, value );
-            });
-        }
-    });
-    
-    $.ajax({
-        url: 'ajax.php',
-        type: 'POST',
-        data: data,
-        cache: false,
-        dataType: 'json',
-        processData: false,
-        contentType: false,
-        xhr: function() {
-            let myXhr = $.ajaxSettings.xhr();
-
-            if ( myXhr.upload ) {
-                myXhr.upload.addEventListener( 'progress', function(e) {
-                    if ( e.lengthComputable ) {
-                        let percentage = ( e.loaded / e.total ) * 100;
-                            percentage = percentage.toFixed(0);
-                        $('.submit', form)
-                            .html( percentage + '%' );
-                    }
-                }, false );
-            }
-
-            return myXhr;
-        },
-        error: function( jqXHR, textStatus ) {
-            // Тут выводим ошибку
-        },
-        complete: function() {
-            // Тут можем что-то делать ПОСЛЕ успешной отправки формы
-            console.log('Скоро с вами свяжутся!');
-            form.reset() ;
-        }
-    });
-
-    return false;
 });
