@@ -22,7 +22,7 @@ document.getElementById('tg').addEventListener('submit', function (e){
             this.name.value="";
             this.email.value="";
             this.phone.value="";
-            success.innerHTML="сообщение отправлено!";
+            success.innerHTML="Заявка принята, скоро с вами свяжутся!";
             success.style.display="block";
         })
         .catch((err)=>{

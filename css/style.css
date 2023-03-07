@@ -50,6 +50,18 @@ h1, p{
     text-align:200px;
 }
 
+.menu__list li{
+    display: inline-block;
+}
+
+.menu__list li a{
+ display: flex;
+ color:black;
+ opacity: 0.6;
+ text-decoration: none;
+ 
+}
+
 
 
 header{
@@ -57,9 +69,9 @@ header{
  justify-content: space-between;
 }
 
-.menu__list{
+/* .menu__list{
    display:flex;
-}
+} */
 
 
 
