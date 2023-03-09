@@ -5,7 +5,7 @@ const TOKEN = "6190534304:AAExBy7_bP4uHfQlObJTrLU60CT-hCtkDcY",
 
 
 
-     
+
 
 document.getElementById('tg').addEventListener('submit', function (e){
     e.preventDefault();
@@ -40,3 +40,4 @@ document.getElementById('tg').addEventListener('submit', function (e){
         });
 
 });
+
