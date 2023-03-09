@@ -3,7 +3,9 @@
 *::before{
     box-sizing: border-box;;
 }
-
+html {
+    scroll-behavior: smooth; /* свойство scroll-behavior не наследуется, применяется к прокручиваемым блокам */ 
+  }
 
 body{
     font-family: 'Poppins', sans-serif;
@@ -14,6 +16,15 @@ body{
     color: #131313;
 }
 
+.head__table{
+
+    padding-top: 50px;
+
+}
+
+.table{
+    margin-bottom: 100px;
+}
 
 .main{
     height:100vh;
@@ -167,12 +178,6 @@ padding-top: 40px;
     text-align: center;
 }
 
-.collection__video{
- 
- display:flex;
-
-
-}
 
 
 /* анамиция видео */
@@ -205,10 +210,12 @@ padding-top: 40px;
 
 .description__us{
     text-align : center; 
+    padding-top: 50px;
+    padding-bottom: 50px;
 
 
 }
 
-.collection__inner__us{
-    background-color:aliceblue;
+.about__us{
+    background-color:ivory;
 }
