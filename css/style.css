@@ -224,12 +224,11 @@ padding-top: 40px;
 /* стили для футера */
 
 footer{
-    width: 98%;
-    float:left;
-    padding: 1%;
-    background-color:#fff;
+   
+    background-color:darkgray;
     border-top: 2px solid silver;
     margin-top: 10px;
+    text-align: center;
 
 
 }
