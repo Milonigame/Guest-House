@@ -64,6 +64,14 @@ h1, p{
 }
 
 
+/* aнимация кнопки */
+
+
+
+
+
+
+/*  */
 
 header{
  display: flex;
@@ -79,6 +87,7 @@ header{
 
 .menu__link{
     text-transform: uppercase;
+    
     
    
 }
@@ -142,7 +151,13 @@ a{
 
 }
 
+.description__room{
+
+padding-top: 40px;
+
+}
 .collection__item{
+    position:relative;
     padding: 12px;
     display: inline-block;
     justify-content: space-between;
@@ -153,12 +168,8 @@ a{
 }
 
 .collection__video{
- position: absolute;
  
- padding:12px;
- padding-right: 6px;
- 
-
+ display:flex;
 
 
 }
@@ -168,7 +179,10 @@ a{
 
 
 
+.new-collection{
 
+    background-color:beige;
+}
 
 /*  */
 
@@ -186,3 +200,15 @@ a{
 }
 
 
+/* 
+о нас */
+
+.description__us{
+    text-align : center; 
+
+
+}
+
+.collection__inner__us{
+    background-color:aliceblue;
+}

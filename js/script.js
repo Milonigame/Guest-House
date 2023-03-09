@@ -5,6 +5,8 @@ const TOKEN = "6190534304:AAExBy7_bP4uHfQlObJTrLU60CT-hCtkDcY",
 
 
 
+     
+
 document.getElementById('tg').addEventListener('submit', function (e){
     e.preventDefault();
    
@@ -24,6 +26,11 @@ document.getElementById('tg').addEventListener('submit', function (e){
             this.phone.value="";
             success.innerHTML="Заявка принята, скоро с вами свяжутся!";
             success.style.display="block";
+            setTimeout(()=>{
+                success.remove();
+            },2300);
+
+            
         })
         .catch((err)=>{
             console.warn('err');
