@@ -40,4 +40,3 @@ document.getElementById('tg').addEventListener('submit', function (e){
         });
 
 });
-

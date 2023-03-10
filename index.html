@@ -25,7 +25,7 @@
         <nav class="menu">
         <ul class="menu__list">
             <li class="menu__item"><a id="main" class="menu__link" href="#main">Главная</a></li>
-            <li class="menu__item"><a class="menu__link" href="#photo">Номера</a></li>
+            <li class="menu__item"><a class="menu__link" href="#room">Номера</a></li>
             <li class="menu__item"><a class="menu__link" href="#cost">Цены</a></li>
             <li class="menu__item"><a class="menu__link" href="#about__us">О нас</a></li>
             <li class="menu__item"><a class="menu__link" href="#social">Контакты</a></li>
@@ -44,20 +44,20 @@
                         
                         <div class="formWrapper">
                             
-                            <form id="tg" method="POST" class="telegram-form" action="mail.php">
+                            <form  name="form" id="tg" method="POST" class="telegram-form" action="mail.php">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Ваше имя</label>
-                                    <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите ваше имя">
+                                    <input type="text" required name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите ваше имя" data-validate>
                                     
                                   </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">e-mail адрес</label>
-                                    <input type="text" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите ваш e-mail">
+                                    <input type="text" required name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите ваш e-mail">
                                     
                                   </div>
                                   <div class="form-group">
                                     <label for="exampleInputEmail1">номер телефона</label>
-                                    <input type="text" name="phone" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите ваш номер телефона">
+                                    <input type="text"  required name="phone" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите ваш номер телефона" data-validate>
                                    
                                   </div>
                                  
@@ -80,9 +80,9 @@
 
     <!-- Room descriptions -->
 
-  <section class="new-collection">
+  <section id="room" class="new-collection">
     <div class="conteiner-fluid">
-        <div class="title__room">
+        <div  class="title__room">
         <h3 class="description__room">
             Комфортные номера
         </h3>
