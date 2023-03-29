@@ -350,7 +350,7 @@ footer{
 .offer__slider-next{margin-left:10px;cursor:pointer} */
 .offer__slider-counter{display:flex;width:180px;align-items:center;font-size:24px;color:rgba(0,0,0,.5)}
 
-.offer__slide img{width:90%;height:600px;object-fit:cover}
+.offer__slide img{width:100%;height:1000px;object-fit:cover}
 .offer__slider #current{font-size:48px;font-weight:700;color:#000}
  .offer__slider-wrapper{width:100%;margin-top:15px;box-shadow:0 4px 30px rgba(0,0,0,.25)} 
  .offer__slide img{width:100%;height:100%;object-fit:cover}
