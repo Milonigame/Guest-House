@@ -110,11 +110,15 @@ header{
 }
 .col-sm-8{
     color:beige;
-    text-shadow: 2px 2px 2px #000;
+    text-shadow: 2px 2px 2px #000; 
     
-    
-    
+}
 
+.col-sm-8 h1 {
+    font-size: 60px;
+}
+.col-sm-8 p{
+    font-size:25px
 }
 
 .tr{
@@ -282,11 +286,17 @@ a{
 
 .table{
     text-align: center;
-    background:rgb(145, 232, 247);
+   background-color:#E6E6FA;
     color : black;
-    border: solid rgb(128, 187, 255) ;
-    border-radius: 20px;
+    border: solid rgb(150, 144, 177) ;
+    border-radius: 10px;
+ 
 }
+
+th:hover {
+    color: yellowgreen;
+  }
+
 
 .head__table{
     text-align: center;
@@ -378,7 +388,7 @@ video{
   .head__table h1 {
     font-family: 'Righteous', cursive;
     position: relative;
-    color: #3CA1D9; 
+    color: #7B68EE; 
     display: inline-block;
     border-top: 2px solid;
     border-bottom: 2px solid;
