@@ -157,8 +157,11 @@ a{
     background:#fff;
     color:#222;
     padding: 20px 10px;
-    background-image: linear-gradient(to left, rgb(157, 248, 255), rgb(155, 155, 255) );
-
+    /* background-image: linear-gradient(to left, rgb(157, 248, 255), rgb(155, 155, 255) ); */
+    background-image: linear-gradient(to right ,#c7e0e3, #9ae7db, #c3d6fa, #bee5ff, #b6f6ff);
+    border-radius: 20px;
+   
+    
 }
 
 .conteiner-fluid{
@@ -184,7 +187,7 @@ a{
     font-family: 'Merriweather', serif;
     position: relative;
     color: #FCF2E5;
-    background: #90806A;
+    background: #BC8F8F;
     font-size: 2.5em;
     font-weight: normal;
     padding: 10px 40px;
@@ -200,14 +203,14 @@ a{
     height: 4px;
     left: 0;
     bottom: -15px;
-    background: #90806A;
+    background: #BC8F8F;
   }
   .title__room h3:after {
     content: ""; 
     position: absolute;
     height: 0;
     width: 80%;
-    border-top: 10px solid #90806A;
+    border-top: 10px solid #BC8F8F;
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
     left: 50%;
@@ -425,6 +428,55 @@ table th, td{
     background-image: linear-gradient(to right ,#d1c3f8, #ffd3f5, #d0fdff, #ffd7db, #cab6ff);
 
 }
+
+
+
+/*  */
+
+/* BUTTON */
+
+.btn1 {
+    display: inline-block; 
+    box-sizing: border-box;
+    padding: 0 25px;
+    margin: 0 15px 15px 0;
+    outline: none;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #444;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation; 
+    vertical-align: top;
+    transition: box-shadow 0.2s;
+}
+.btn1:focus-visible {
+    border: 1px solid #4c51f9;
+    outline: none;
+}
+.btn1:hover {
+    transition: all 0.2s;
+    box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+}
+.btn1:active {
+    background-color: #808080;
+}
+.btn1:disabled {
+    background-color: #eee;
+    border-color: #eee;
+    color: #444;
+    cursor: not-allowed;
+}
+/* form style */
+
 
 
 

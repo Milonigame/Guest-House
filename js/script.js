@@ -41,6 +41,7 @@ const TOKEN = "6190534304:AAExBy7_bP4uHfQlObJTrLU60CT-hCtkDcY",
         });
 
 });
+// CЛАЙДЕР КОМНАТ//
 
 let slideIndex = 1;
 const slides = document.querySelectorAll('.offer__slide'),
