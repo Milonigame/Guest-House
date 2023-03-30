@@ -293,9 +293,6 @@ a{
  
 }
 
-th:hover {
-    color: yellowgreen;
-  }
 
 
 .head__table{
@@ -422,8 +419,12 @@ video{
     text-align: center;
     
     }
+table th, td{
 
 
+    background-image: linear-gradient(to right ,#d1c3f8, #ffd3f5, #d0fdff, #ffd7db, #cab6ff);
+
+}
 
 
 
