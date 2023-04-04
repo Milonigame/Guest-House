@@ -589,6 +589,9 @@ border-radius:50%;
 
 /* описание о нас */
 
+@media (max-width: 320px) {
+    .about__us h2 {font-size: 2em;}
+  }
 
 .wrapper__about__us{
     background-color:ivory;
