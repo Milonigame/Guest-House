@@ -260,6 +260,22 @@ a{
     border-right: 2px solid #fed57b;
   }
 
+
+  @media screen and (max-width: 768px) {
+    .title__room h3 {
+    font-size: 1.5rem;
+    }
+    .description__room h4 {
+    font-size: 1rem;
+    }
+    .offer__slider {
+    display: none;
+    }
+    .wrapper__video {
+    margin-bottom: 1rem;
+    }
+    }
+
 /*     */
 
 
