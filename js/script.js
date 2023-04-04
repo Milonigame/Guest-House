@@ -100,7 +100,11 @@ next.addEventListener('click', function(){
 // about us slider
 
 $(document).ready(function(){
-$('.slider').slick();
+$('.slider').slick({
+
+    arrows:true,
+    dots:true
+});
 
 });
 
