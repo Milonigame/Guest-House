@@ -115,14 +115,14 @@ header{
 }
 
 .col-sm-8 h1 {
-    font-size: 60px;
+    font-size: 50px;
 }
 .col-sm-8 p{
-    font-size:25px
+    font-size:21px
 }
 
 .tr{
-    font-size: 16px;
+    font-size: 14px;
 }
 
 ul{
@@ -397,7 +397,7 @@ video{
     margin: 0; 
     line-height: 1;
   }
-  .head__table h1:before, .one h1:after {
+  .head__table h1:before, .head__table h1:after {
     content: ""; 
     position: absolute;
     top: 0;
@@ -457,6 +457,7 @@ table th, td{
     touch-action: manipulation; 
     vertical-align: top;
     transition: box-shadow 0.2s;
+    
 }
 .btn1:focus-visible {
     border: 1px solid #4c51f9;
@@ -475,9 +476,103 @@ table th, td{
     color: #444;
     cursor: not-allowed;
 }
+
+
 /* form style */
 
+/* обнуление */
+
+/* стили демонстрации */
 
 
 
-/*  */
+/* Слайдер */
+.slick-slider{
+   
+}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slick-list {
+    overflow: hidden;
+}
+
+/* Лента слайдов */
+.slick-track{
+    display: flex;
+
+   
+}
+
+/* Слайд */
+.slick-slide{}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+.slick-arrow{}
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+/* Стрелка вправо */
+.slick-arrow.slick-next{}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+/* Точки (булиты) */
+.slick-dots{}
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active{}
+/* Элемент точки */
+.slick-dots li button{}
+
+/* конкретный слайдер*/
+.slider{
+
+    position: relative;
+   
+}
+.slider .slick-arrow{
+    
+    position: absolute;
+    top:50%;
+    z-index:10;
+    font-size:0;
+    width: 200px;
+    height: 200px;
+    outline:0;
+} 
+.slider .slick-arrow.slick-prev{
+    left:0;
+    
+    background: url('/иконки/left_back_arrow_5821.png') 0 0 / 100% no-repeat;
+    border:0;
+    opacity: .3;
+    
+}
+.slider .slick-arrow.slick-next{
+
+    right: 0;
+    background: url('/иконки/right_next.png') 0 0 / 100% no-repeat;
+    border:0;
+    opacity: .3;
+}
+
+
+.slider__item{
+    display: flex;
+    justify-content: center; /* Горизонтальное выравнивание по центру */
+    align-items: center;
+}
+
+.slider__item img{
+  width: initial;
+  
+  
+}

@@ -96,3 +96,11 @@ next.addEventListener('click', function(){
     plusSlides(1);
 });
 
+
+// about us slider
+
+$(document).ready(function(){
+$('.slider').slick();
+
+});
+
