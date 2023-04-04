@@ -395,8 +395,9 @@ footer{
   
 }
 .wrapper__video{
-    float: left;
+    
     width: 50%;
+    float: left;
  
 }
 
@@ -415,6 +416,27 @@ video{
     .offer__slider-wrapper {
       width: 100%;
       float: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .wrapper__video {
+      width: 100%;
+      float: none;
+      text-align: center;
+    }
+  
+    .offer__slider-wrapper {
+      width: 100%;
+      float: none;
+    }
+  
+    .offer__slider {
+      max-width: 100%;
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
     }
   }
 /* .offer__slider-prev{margin-right:10px;display: block;}
