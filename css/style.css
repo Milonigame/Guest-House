@@ -610,8 +610,7 @@ border-radius:50%;
     z-index: 3;
     border-top: 2px solid silver;
     margin-top: 10px;
-    align-self: center;
-    text-align: center;
+   
   }
   
   .title__us {
