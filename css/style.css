@@ -14,6 +14,7 @@ body{
     font-size: 14px;
     line-height: 17px;
     color: #131313;
+    background:#FFF0F5;
 }
 
 .head__table{
@@ -381,7 +382,7 @@ video{
 /* стоимость номеров */
 .head__table {
  
-    background: #FFF4ED;
+    background:#FFF0F5;
     padding: 50px 20px;
     text-align: center;
   }
@@ -421,14 +422,17 @@ video{
     border-spacing: 0;
     text-align: center;
     
+    
     }
+
 table th, td{
-
-
     background-image: linear-gradient(to right ,#dad2f7, #fff8fe, #defbfc, #f8e2fc, #e6d2fa);
-
 }
+.container__table{
 
+    margin-bottom: 100px;
+    background:#FFF0F5;
+}
 
 
 /*  */
@@ -576,3 +580,48 @@ table th, td{
   
   
 }
+
+
+/* описание о нас */
+
+.title__us {
+    background:#E6E6FA;
+    padding: 50px 20px;
+    text-align: center;
+   
+  } 
+  .title__us h2 {
+    font-family: 'Merriweather', serif;
+    position: relative;
+    color:#444;
+    font-size: 50px;
+    font-weight: normal;
+    padding: 8px 20px 7px 20px;
+    border-top: 4px solid;
+    border-left: 4px solid;
+    display: inline-block;
+    margin: 0;
+    line-height: 1;
+  }
+  .title__us h2:before {
+    content: ""; 
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    top: -28px;
+    left: -28px;
+    border: 4px solid #7B68EE;
+    box-sizing: border-box;
+  }
+  @media (max-width: 450px) {
+    .title__us h2 {font-size: 36px;}
+    .title__us h2:before {
+      width: 20px;
+      height: 20px;
+      top: -20px;
+      left: -20px;
+    }
+  }
+
+
+
