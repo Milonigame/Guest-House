@@ -561,6 +561,7 @@ border-radius:50%;
 
     position: relative;
     padding: 0px 50px;
+    height: auto;
    
 }
 .slider .slick-arrow{
