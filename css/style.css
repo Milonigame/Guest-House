@@ -17,6 +17,17 @@ body{
     background:#FFF0F5;
 }
 
+@media screen and (max-width: 768px) {
+    /* Стили для устройств с шириной экрана до 768 пикселей */
+    }
+    
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Стили для устройств с шириной экрана от 769 до 1024 пикселей */
+    }
+    
+    @media screen and (min-width: 1025px) {
+    /* Стили для устройств с шириной экрана больше 1025 пикселей */
+    }
 .head__table{
 
     padding-top: 50px;
