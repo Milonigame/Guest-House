@@ -155,7 +155,7 @@ a{
 }
 
 
-/*        */
+/*    форма для заполнения    */
 
 
 
@@ -193,7 +193,7 @@ a{
 
 .title__room{
 
-    background: #FCF2E5;
+  
     padding: 50px 20px;
     text-align: center;
 
@@ -276,24 +276,8 @@ a{
   }
 
 
-  @media screen and (max-width: 768px) {
-    .title__room h3 {
-    font-size: 1.5rem;
-    }
-    .description__room h4 {
-    font-size: 1rem;
-    }
-    .offer__slider {
-    display: none;
-    }
-    .wrapper__video {
-    margin-bottom: 1rem;
-    
 
-    }
-    }
 
-/*     */
 
 
 .collection__item{
@@ -314,61 +298,17 @@ a{
 
 
 
-.new-collection{
-
-    background-color:beige;
-}
 
 /*  */
 
 
-.table{
-    text-align: center;
-   background-color:#E6E6FA;
-    color : black;
-    border: solid rgb(150, 144, 177) ;
-    border-radius: 10px;
- 
-}
 
 
 
 
 
-/* 
-о нас */
 
-.description__us{
-    text-align : center; 
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-
-}
-
-.about__us{
-    background-color:ivory;
-}
-
-
-
-.map{
-  
-
-    align-self:center;
-}
-
-.icon{
-    width: 50px;
-    height: 50px;
-}
-.icon-t{
-    width: 28px;
-    height: 28px;
-    
-}
-
-/* room description */
+/* offer room description */
 
 /* 
 .new-collection {
@@ -379,17 +319,23 @@ a{
   .new-collection {
     z-index: 1;
     display: flex;
-
+    background-color:#fff;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+    padding-bottom: 200px;
+
   }
 
   .wrapper__video{
     float: left;
+    padding-top: 70px;
+    left: 100px;
+   
   }
   .wrapper-slider{
     float: right;
+    right: 50px;
   }
 
  .offer__slider-prev{margin-right:10px;display: block;}
@@ -403,7 +349,7 @@ a{
  .offer__slider{margin-top:50px;display:flex;flex-direction:column;align-items:flex-end}  
 
 
-/* стоимость номеров */
+/*table стоимость номеров */
 
 .container__table {
     position: relative;
@@ -450,6 +396,14 @@ table th, td{
     background-image: linear-gradient(to right ,#dad2f7, #fff8fe, #defbfc, #f8e2fc, #e6d2fa);
 }
 
+.table{
+    text-align: center;
+   background-color:#E6E6FA;
+    color : black;
+    border: solid rgb(150, 144, 177) ;
+    border-radius: 10px;
+ 
+}
 
 
 
@@ -575,7 +529,7 @@ border-radius:50%;
 
 }
 
-/* конкретный слайдер*/
+/* слайдер о нас слайдер*/
 .slider{
 
     position: relative;
@@ -636,6 +590,35 @@ border-radius:50%;
   }
 
 /* описание о нас */
+.description__us{
+    text-align : center; 
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+
+}
+
+.about__us{
+    background-color:ivory;
+}
+
+
+
+.map{
+  
+
+    align-self:center;
+}
+
+.icon{
+    width: 50px;
+    height: 50px;
+}
+.icon-t{
+    width: 28px;
+    height: 28px;
+    
+}
 
 .title__us {
    
