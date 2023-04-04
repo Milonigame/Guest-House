@@ -590,13 +590,7 @@ border-radius:50%;
   }
 
 /* описание о нас */
-.description__us{
-    text-align : center; 
-    padding-top: 50px;
-    padding-bottom: 50px;
 
-
-}
 
 .about__us{
     background-color:ivory;
