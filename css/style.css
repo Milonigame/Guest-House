@@ -590,7 +590,7 @@ border-radius:50%;
 /* описание о нас */
 
 
-.about__us, h2, .wrapper{
+.wrapper__about__us{
     background-color:ivory;
     position: relative;
     z-index: 3;
