@@ -600,16 +600,14 @@ border-radius:50%;
 .slider__item img{
     max-width: 100%; /* Изменяем максимальную ширину изображения на 100%, чтобы она могла растягиваться на всю ширину экрана мобильного устройства */
     height: auto; 
-  
-  
-}
-.slider__item {
     display: flex;
     justify-content: center; /* Горизонтальное выравнивание по центру */
     align-items: center; /* Вертикальное выравнивание по центру */
-    height: 100vh; /* Задаем высоту для каждого слайда на мобильных устройствах */
-  }
+    height: 100vh; 
   
+  
+}
+
   .slide-image {
     background-position: center;
     background-size: cover;
