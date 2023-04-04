@@ -59,9 +59,7 @@ body{
 }
 
 /* header menu */
-.new-collection{
-   
-}
+
 .log__text{
    
     background-size: cover;
@@ -592,7 +590,7 @@ border-radius:50%;
 /* описание о нас */
 
 
-.about__us{
+.about__us, h2{
     background-color:ivory;
     position: relative;
     z-index: 3;
