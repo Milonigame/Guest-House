@@ -602,6 +602,9 @@ border-radius:50%;
     background-color:ivory;
     position: relative;
     z-index: 3;
+    border-top: 2px solid silver;
+    margin-top: 10px;
+    text-align: center;
 }
 
 
