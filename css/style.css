@@ -770,18 +770,13 @@ border-radius:50%;
   }
   
   .title__us h2 {
-    font-family: 'Merriweather', serif;
-    position: relative;
-    color: #444;
-    font-size: 30px;
-    font-weight: normal;
-    padding: 8px 20px 7px 20px;
-    border-top: 4px solid;
-    border-left: 4px solid;
-    display: inline-block;
-    margin: 0;
-    line-height: 1;
-  }
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+  text-transform: uppercase;}
   
   .title__us h2:before {
     content: "";
@@ -790,7 +785,7 @@ border-radius:50%;
     height: 28px;
     top: -28px;
     left: -28px;
-    border: 4px solid #7B68EE;
+  
     box-sizing: border-box;
   }
 
@@ -804,7 +799,7 @@ border-radius:50%;
   .title__us h2 {
     font-family: 'Merriweather', serif;
     position: relative;
-    color:#444;
+  
     font-size: 30px;
     font-weight: normal;
     padding: 8px 20px 7px 20px;
@@ -820,8 +815,7 @@ border-radius:50%;
     width: 28px;
     height: 28px;
     top: -28px;
-    left: -28px;
-    border: 4px solid #7B68EE;
+   
     box-sizing: border-box;
   }
 
