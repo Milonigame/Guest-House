@@ -325,15 +325,35 @@ a{
 
   }
 
+
+@media (max-width: 767px) {
+  video {
+    position: relative;
+    margin: 0 auto;
+    width: 350px;
+    height:450px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
   .wrapper__video{
     float: left;
     padding-top: 70px;
-    left: 100px;
+    
    
   }
   .wrapper-slider{
     float: right;
     right: 50px;
+  }
+  @media screen and (max-width: 767px) {
+    .offer__slide {
+      text-align: center; /* позиционирование изображения по центру */
+    }
+    .offer__slide img {
+      display: block; /* убираем белый блок под слайдером */
+      max-width: 100%; /* масштабируем изображение на всю ширину блока */
+    }
   }
 
  .offer__slider-prev{margin-right:10px;display: block;}
