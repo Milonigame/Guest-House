@@ -166,8 +166,45 @@ a{
     margin-top: -100px;
     
 }
+.form-group {
+  margin-bottom: 20px;
+}
 
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input {
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+button:hover {
+  background-color: #bee5ff;
+}
 .formWrapper{
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  padding: 20px;
     background:#fff;
     color:#222;
     padding: 20px 10px;
@@ -292,28 +329,8 @@ a{
 
 
 
-/* анамиция видео */
 
 
-
-
-/*  */
-
-
-
-
-
-
-
-
-/* offer room description */
-
-/* 
-.new-collection {
-    position: relative;
-    z-index: 1;
-  } */
-  
   .new-collection {
     z-index: 1;
     display: flex;
@@ -354,16 +371,7 @@ video{
     transform: translateX(-50%);
   }
 }
-  /* .wrapper__video{
-    float: left;
-    padding-top: 70px;
-    
-   
-  } */
-  /* .wrapper-slider{
-    float: right;
-    right: 50px;
-  } */
+
   @media screen and (max-width: 767px) {
     .offer__slide {
       text-align: center; /* позиционирование изображения по центру */
@@ -390,8 +398,9 @@ video{
 .container__table {
     position: relative;
     z-index: 2;
-    margin-bottom: 90px;
-    
+   padding-bottom: 80px;
+   padding-top: 50px;
+   
   }
   .head__table{
 
@@ -436,58 +445,7 @@ video{
 
 
 
-/* .head__table {
- 
-    background:#FFF0F5;
-    padding: 50px 20px;
-    text-align: center;
-  }
-  .head__table h1 {
-    font-family: 'Righteous', cursive;
-    position: relative;
-    color: #7B68EE; 
-    display: inline-block;
-    border-top: 2px solid;
-    border-bottom: 2px solid;
-    font-size: 3em;
-    padding: 9px 50px;
-    margin: 0; 
-    line-height: 1;
-  } */
-  /* .head__table h1:before, .head__table h1:after {
-    content: ""; 
-    position: absolute;
-    top: 0; */
-  
-    /* border-left: 2px solid;
-    border-right: 2px solid; */
-    /* background: repeating-linear-gradient(180deg, transparent, transparent 2px, #3CA1D9 2px, #3CA1D9 4px); */
-  /* } */
-  /* .head__table h1:before {left: 0;}
-  .head__table h1:after {right: 0;}
 
-  @media (max-width: 320px) {
-    .head__table h1 {font-size: 2em;}
-  } */
-
-
-/* table th, td{
-    background-image: linear-gradient(to right ,#dad2f7, #fff8fe, #defbfc, #f8e2fc, #e6d2fa);
-} */
-
-/* .table{
-    text-align: center;
-   background-color:#E6E6FA;
-    color : black;
-    border: solid rgb(150, 144, 177) ;
-    border-radius: 10px;
- 
-} */
-
-
-
-
-/*  */
 
 /* BUTTON */
 
@@ -658,6 +616,12 @@ video{
 
 
 /* Элемент точки */
+
+
+
+
+
+
 .slider .slick-dots button{
 
 font-size:0;
@@ -763,6 +727,8 @@ border-radius:50%;
     margin-top: 10px;
     left: 50%;
   transform: translateX(-50%);
+    border:0;
+  
    
   }
   
@@ -772,32 +738,39 @@ border-radius:50%;
   }
   
   .title__us h2 {
-  font-size: 36px;
-  font-weight: bold;
-  text-align: center;
+
+
+    font-size: 3rem;
+  
+ 
+font-weight: bold;
+  
+ 
+
+ 
+text-align: center;
+  
+ 
+background-color: #f7f7f7;
   color: #333;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
-  margin-bottom: 20px;
-  text-transform: uppercase;}
+  border-radius: 0.5rem;
   
-  .title__us h2:before {
-    content: "";
-    position: absolute;
-    width: 28px;
-    height: 28px;
-    top: -28px;
-    left: -28px;
+ 
+padding: 1rem;
   
-    box-sizing: border-box;
+
+
+ 
+box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  
+ 
+margin: 1rem 0;
+
+
   }
 
 
-.title__us {
-   
-    padding: 50px 20px;
-    text-align: center;
-   
-  } 
+
   .about__us{
 
 background-color:ivory;
@@ -815,15 +788,14 @@ background-color:ivory;
    
   }
   .title__us h2:before {
-    content: ""; 
+    /* content: ""; 
     position: absolute;
     width: 28px;
     height: 28px;
     top: -28px;
    
-    box-sizing: border-box;
+    box-sizing: border-box; */
   }
-
 
 
 
