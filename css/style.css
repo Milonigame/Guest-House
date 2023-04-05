@@ -540,18 +540,79 @@ table th, td{
 
 /* Точки (булиты) */
 .slider .slick-dots{
-    display: flex;
+    /* display: flex;
     align-items:center;
-    justify-content:center;
+    justify-content:center; */
+
+    list-style: none;
+    display: flex;
+    justify-content: center;
 }
 .slider .slick-dots li{
-    list-style: none;
-    margin: 0px 10px ;
+    /* list-style: none;
+    margin: 0px 10px ; */
+    margin: 0 10px;
 
 }
 
+.slider .slick-dots li button {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.slider .slick-dots li button::before {
+  content: "\2665"; /* Код символа сердечка */
+  font-size: 20px;
+  line-height: 20px;
+  color: #ccc; /* Цвет неактивного сердечка */
+  opacity: 0.5; /* Прозрачность неактивного сердечка */
+  transition: all 0.3s ease;
+}
+.slider .slick-dots li.slick-active button::before {
+  color: #f00; /* Цвет активного сердечка */
+  opacity: 1; /* Прозрачность активного сердечка */
+  transform: scale(1.2); /* Увеличение активного сердечка */
+}
 /* Активная точка */
-.slick-dots li.slick-active{}
+.slider .slick-dots li.slick-active button{
+
+  /* background-color: transparent;
+  border: 1px solid #E6E6FA; */
+  outline: none;
+  border: none;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 0 5px;
+  position: relative;
+
+}
+.slider .slick-dots li button:before {
+  content: "\2665";
+  font-size: 20px;
+  color: #ccc;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider .slick-dots li.slick-active button:before {
+  color: #ff69b4;
+}
+
+
 
 /* Элемент точки */
 .slider .slick-dots button{
@@ -559,7 +620,7 @@ table th, td{
 font-size:0;
 width:10px;
 height: 10px;
-background-color:#E6E6FA;
+background-color:#808080;
 border:0;
 border-radius:50%;
 
