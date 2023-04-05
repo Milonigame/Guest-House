@@ -401,13 +401,17 @@ video{
    padding-bottom: 80px;
    padding-top: 50px;
    
+   
   }
-  .head__table{
+
+   .head__table{
 
      text-align: center;
+     margin-bottom: 60px;
+     color: #444;
     
-
   }
+
   .table {
     border-collapse: separate;
     border-spacing: 0 20px;
@@ -417,13 +421,15 @@ video{
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 15px;
 }
 
 .table th {
     background-color: #f9f9f9;
     font-size: 1.2rem;
     font-weight: bold;
-    color: #333;
+    color:#444;
     padding: 1rem;
     text-align: center;
     border-radius: 10px;
@@ -441,6 +447,9 @@ video{
     border-radius: 10px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
+
+
+
 
 
 
@@ -516,6 +525,8 @@ video{
 /* Лента слайдов */
 .slick-track{
     display: flex;
+    align-items:flex-start;
+
 
    
 }

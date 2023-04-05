@@ -2,15 +2,16 @@ const TOKEN = "6190534304:AAExBy7_bP4uHfQlObJTrLU60CT-hCtkDcY",
      CHAT_ID = "-1001777196683",
      URL_API=`https://api.telegram.org/bot${ TOKEN }/sendMessage`,
      success=document.getElementById('success');
+     const form = document.getElementById('tg');
+
      
-
-
-
-
 
  document.getElementById('tg').addEventListener('submit', function (e){
     e.preventDefault();
    
+
+
+    
     let message =`<b>Заявка с сайта!</b>\n`;
         message +=`<b>Отправитель:</b> ${this.name.value}\n`;
         message +=`<b>Почта:</b> ${this.email.value}\n`;
@@ -104,7 +105,7 @@ $('.slider').slick({
 
     arrows:true,
     dots:true,
-    
+    // adaptiveHeight:true
 });
 
 });
