@@ -534,6 +534,14 @@ border-radius:50%;
     padding: 0px 50px;
     height: auto;
    
+   
+}
+
+@media (max-width: 767px) {
+  .slider {
+    position: static;
+    transform: none;
+  }
 }
 .slider .slick-arrow{
     
@@ -594,6 +602,7 @@ border-radius:50%;
     .title__us h2 {
       font-size: 2em;
     }
+ 
     .wrapper {
       padding: 20px;
       box-sizing: border-box;
@@ -610,6 +619,8 @@ border-radius:50%;
     z-index: 3;
     border-top: 2px solid silver;
     margin-top: 10px;
+    left: 50%;
+  transform: translateX(-50%);
    
   }
   
@@ -642,15 +653,6 @@ border-radius:50%;
     border: 4px solid #7B68EE;
     box-sizing: border-box;
   }
-/* .wrapper{
-    background-color:ivory;
-    position: relative;
-    z-index: 3;
-    border-top: 2px solid silver;
-    margin-top: 10px;
-    align-self:center;
-    text-align: center;
-} */
 
 
 .title__us {
