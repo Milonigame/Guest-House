@@ -391,9 +391,50 @@ video{
     position: relative;
     z-index: 2;
   }
+  .head__table{
+
+     text-align: center;
+     margin-bottom: 50px;
+
+  }
+  .table {
+    border-collapse: separate;
+    border-spacing: 0 20px;
+    background: url('your_background_image_url') no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.table th {
+    background-color: #f9f9f9;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.table td {
+    font-size: 1.2rem;
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
 
 
-.head__table {
+
+
+/* .head__table {
  
     background:#FFF0F5;
     padding: 50px 20px;
@@ -410,36 +451,36 @@ video{
     padding: 9px 50px;
     margin: 0; 
     line-height: 1;
-  }
-  .head__table h1:before, .head__table h1:after {
+  } */
+  /* .head__table h1:before, .head__table h1:after {
     content: ""; 
     position: absolute;
-    top: 0;
+    top: 0; */
   
     /* border-left: 2px solid;
     border-right: 2px solid; */
     /* background: repeating-linear-gradient(180deg, transparent, transparent 2px, #3CA1D9 2px, #3CA1D9 4px); */
-  }
-  .head__table h1:before {left: 0;}
+  /* } */
+  /* .head__table h1:before {left: 0;}
   .head__table h1:after {right: 0;}
 
   @media (max-width: 320px) {
     .head__table h1 {font-size: 2em;}
-  }
+  } */
 
 
-table th, td{
+/* table th, td{
     background-image: linear-gradient(to right ,#dad2f7, #fff8fe, #defbfc, #f8e2fc, #e6d2fa);
-}
+} */
 
-.table{
+/* .table{
     text-align: center;
    background-color:#E6E6FA;
     color : black;
     border: solid rgb(150, 144, 177) ;
     border-radius: 10px;
  
-}
+} */
 
 
 
