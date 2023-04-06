@@ -411,18 +411,31 @@ video{
      color: #444;
     
   }
+  @media screen and (max-width: 320px) {
+    .table th {
+      font-size: 1rem;
+      padding: 0.8rem;
+    }
+    
+    .table td {
+      font-size: 1rem;
+      padding: 1rem;
+    }
+  }
+
 
   .table {
-    border-collapse: separate;
-    border-spacing: 0 20px;
+   
+  
     background: url('your_background_image_url') no-repeat;
     background-size: cover;
     font-family: Arial, sans-serif;
-    width: 100%;
-    max-width: 800px;
+    max-width: 100%;
+    max-width: 900px;
     margin: 0 auto;
     border-collapse: separate;
     border-spacing: 15px;
+   
 }
 
 .table th {
@@ -439,7 +452,7 @@ video{
 }
 
 .table td {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #fff;
     padding: 1.5rem;
     text-align: center;
@@ -447,11 +460,6 @@ video{
     border-radius: 10px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
-
-
-
-
-
 
 
 
