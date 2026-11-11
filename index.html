@@ -1,254 +1,537 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guest-Home</title>
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/adaptive.css">
-    
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Гостевой дом «Холодная речка» — Абхазия, номера с видом на море</title>
+<meta name="description" content="Гостевой дом «Холодная речка» в Багрипше, Абхазия. Трёхместные номера с балконом и видом на море, кондиционер, Wi‑Fi, до пляжа 5 минут пешком. Сезон с 1 мая по 31 октября, от 3 500 ₽ за номер в сутки.">
+<meta name="theme-color" content="#0b5a66">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Гостевой дом «Холодная речка» — Абхазия">
+<meta property="og:description" content="Просыпаться под шум моря: номера с балконом на море, до пляжа 5 минут. Багрипш, 10 км от границы.">
+<meta property="og:url" content="https://at-suren-guest-home.netlify.app/">
+<meta property="og:image" content="https://at-suren-guest-home.netlify.app/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://at-suren-guest-home.netlify.app/">
+<meta property="og:locale" content="ru_RU">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b5a66'/%3E%3Cpath d='M18 34a14 14 0 0 1 28 0z' fill='%23f2852a'/%3E%3Cpath d='M10 41c5-4 9-4 14 0s9 4 14 0 9-4 14 0' stroke='%23f8f2e7' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M14 50c4-3 8-3 12 0s8 3 12 0 8-3 12 0' stroke='%232fb4b9' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/cormorant-cyrillic-034e3f.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/manrope-cyrillic-9f2868.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/video/hero-poster.webp" as="image">
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Гостевой дом «Холодная речка»",
+  "url": "https://at-suren-guest-home.netlify.app/",
+  "image": "https://at-suren-guest-home.netlify.app/assets/img/og.jpg",
+  "description": "Трёхместные номера с балконом и видом на море в Багрипше (Холодная речка), Абхазия. До пляжа 5 минут пешком.",
+  "telephone": "+7 928 153-60-32",
+  "email": "Tank5673@mail.ru",
+  "priceRange": "3500–4000 ₽ за номер в сутки",
+  "address": {"@type": "PostalAddress", "addressLocality": "Багрипш (Холодная речка)", "addressRegion": "Гагрский район", "addressCountry": "Абхазия"},
+  "amenityFeature": [
+    {"@type": "LocationFeatureSpecification", "name": "Кондиционер", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Балкон с видом на море", "value": true}
+  ]
+}
+</script>
 </head>
 <body>
-    <div class="main">
-    <header id='header'>
-     
-        <a class="logo" href="#">
-            <img class="logo__img" width="150" height="150" src="/номера_фото/Без имени-1.png" alt="logo">
-        </a>
-        <nav class="menu">
-        <ul class="menu__list">
-          
-            <li class="menu__item"><a class="menu__link" href="#room">Номера</a></li>
-            <li class="menu__item"><a class="menu__link" href="#cost">Цены</a></li>
-            <li class="menu__item"><a class="menu__link" href="#about__us">О нас</a></li>
-            <li class="menu__item"><a class="menu__link" href="#social">Контакты</a></li>
-        </ul>
-    </nav>
 
+<!-- ============ PRELOADER ============ -->
+<div class="preloader" aria-hidden="true">
+  <div class="preloader__scene">
+    <svg class="preloader__sun" viewBox="0 0 200 120">
+      <defs>
+        <clipPath id="horizon"><rect x="0" y="0" width="200" height="78"/></clipPath>
+        <radialGradient id="sunG" cx="50%" cy="45%" r="60%"><stop offset="0" stop-color="#ffd27a"/><stop offset="1" stop-color="#f2852a"/></radialGradient>
+      </defs>
+      <g clip-path="url(#horizon)"><circle class="preloader__disc" cx="100" cy="78" r="34" fill="url(#sunG)"/></g>
+      <path class="preloader__wave w1" d="M10 84c15-8 30-8 45 0s30 8 45 0 30-8 45 0 30 8 45 0"/>
+      <path class="preloader__wave w2" d="M30 98c12-6 24-6 36 0s24 6 36 0 24-6 36 0 24 6 36 0"/>
+    </svg>
+    <p class="preloader__title">Холодная речка</p>
+    <p class="preloader__count"><span data-count>0</span>%</p>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="header" data-header>
+  <a class="logo" href="#top" aria-label="Холодная речка — на главную">
+    <svg class="logo__mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M18 34a14 14 0 0 1 28 0z" fill="#f2852a"/><path d="M10 41c5-4 9-4 14 0s9 4 14 0 9-4 14 0" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M14 50c4-3 8-3 12 0s8 3 12 0 8-3 12 0" stroke="#2fb4b9" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+    <span class="logo__text">Холодная речка<small>гостевой дом · Абхазия</small></span>
+  </a>
+  <nav class="nav" aria-label="Разделы">
+    <a href="#rooms">Номера</a>
+    <a href="#life">Быт</a>
+    <a href="#place">Место</a>
+    <a href="#prices">Цены</a>
+    <a href="#faq">Вопросы</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+  <div class="dayclock" title="Один день у моря — листайте, и день идёт">
+    <svg viewBox="0 0 48 26" aria-hidden="true"><path d="M3 23a21 21 0 0 1 42 0" class="dayclock__arc"/><line x1="0" y1="23.5" x2="48" y2="23.5" class="dayclock__horizon"/><circle r="4" cx="3" cy="23" class="dayclock__sun" data-sun/></svg>
+    <span data-clock>07:00</span>
+  </div>
+  <a class="btn btn--sm btn--mandarin header__cta" href="#prices" data-magnetic>Свободные даты</a>
+  <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger><span></span><span></span></button>
 </header>
-        <div class="center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-8">
-                        <h1>Заявка на бронирование</h1>
-                        <p class="tr">Лучшее соотношение цены и качества под солнцем у моря</p>
-                    </div>
-                    <div class="col-sm-4">
-                        
-                        <div class="formWrapper">
-                            
-                            <form  name="form" id="tg" method="POST" class="telegram-form" action="mail.php">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Ваше имя</label>
-                                    <input type="text" required name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите ваше имя" data-validate>
-                                    
-                                  </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">e-mail адрес</label>
-                                    <input type="email" required name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите ваш e-mail">
-                                    <span class="error-message"></span>
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="exampleInputEmail1">номер телефона</label>
-                                    <input type="number"  required name="phone" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите ваш номер телефона" data-validate>
-                                    <span class="error-message"></span>
-                                  </div>
-                                 
-                                  </div>
-                                  <div id="success" class="alert alert-success" role="alert" style="display: none;"></div>
 
-                                  
-                                  <button type="submit" class="btn1">Отправить заявку</button>
-                            </form>
-                        </div>
-                    </div>
-                 
-                </div>
-            </div>
-       
-        </div>
-    </div>
-    </div>
-
-
-    <!-- Room descriptions -->
-
-  <div id="room" class="new-collection">
-    <div class="col-md-12">
-        <div  class="title__room">
-        <h3>
-            Комфортные номера
-        </h3>
-
-        <div class="description__room">
-         <h4>
-         Номера трехместные,питание не включено.
-         <br>На первом этаже - кафе- столовая с мангалом. 
-         <br>Есть возможность самим готовить себе еду.
-        </h4>
-        </div>
-        <div class="wrapper__video">
-            <div class="video">
-                <video controls>
-                    <source src="/WhatsApp Video 2023-03-03 at 12.31.59.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
-        <div class="wrapper-slider">
-        <div class="offer__slider">
-            <div class="offer__slider-counter">
-                <div class="offer__slider-prev">
-                    <img src="icons/left.svg" alt="prev">
-                </div>
-                <span id="current"></span>
-                /
-                <span id="total">06</span>
-                <div class="offer__slider-next">
-                    <img src="icons/right.svg" alt="next">
-                </div>
-            </div>
-           
-            <div class="offer__slider-wrapper">
-                <div class="offer__slide">
-                    <img src="/номера_фото/1.jpeg" alt="pepper">
-                </div>
-                <div class="offer__slide">
-                    <img src="/номера_фото/2.jpeg" alt="food">
-                </div>
-                <div class="offer__slide">
-                    <img src="/номера_фото/4.jpeg" alt="oil">
-                </div>
-                <div class="offer__slide">
-                    <img src="/номера_фото/5.jpeg" alt="paprika">
-                </div>
-                <div class="offer__slide">
-                    <img src="/номера_фото/вид из номера.jpeg" alt="paprika">
-                </div>
-                <div class="offer__slide">
-                    <img src="/номера_фото/туалет.jpeg" alt="paprika">
-                </div>
-            </div>
-        
-            </div>
-         
-        </div>
-    </div>
-
-    </div>
-</div>
+<div class="menu" data-menu aria-hidden="true">
+  <nav class="menu__nav">
+    <a href="#rooms"><i>01</i>Номера</a>
+    <a href="#life"><i>02</i>Быт</a>
+    <a href="#place"><i>03</i>Место</a>
+    <a href="#prices"><i>04</i>Цены</a>
+    <a href="#faq"><i>05</i>Вопросы</a>
+    <a href="#contacts"><i>06</i>Контакты</a>
+  </nav>
+  <a class="btn btn--mandarin btn--wide" href="https://wa.me/79281536032?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BE%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D1%8B%D1%85%20%D0%BD%D0%BE%D0%BC%D0%B5%D1%80%D0%B0%D1%85." target="_blank" rel="noopener">Написать в WhatsApp</a>
 </div>
 
-  
-  <div id='cost' class="container__table">
-     <div class="head__table">
-    <h1>
-        Стоимость номера за сутки
-    </h1>
-     </div>
-    <table  class="table" border="0">
-        <tbody>
-            <tr>
-                <th>
-                    1.05 - 15.06 
-                </th>
-                <th>
-                    16.06 - 15.09
-                </th>
-                <th>
-                    16.09 - 31.10
-                </th>
-            </tr>
-            <tr>
-                <td>
-                    3500р./сутки
-                </td>
-                <td>
-                    4000р./сутки
-                </td>
-                <td>
-                    3500р./сутки
-                </td>
-            </tr>
-        </tbody>
-       
-    </table>
+<main id="top">
+
+<!-- ============ 07:00 HERO ============ -->
+<section class="hero" data-time="07:00" aria-label="Гостевой дом Холодная речка">
+  <div class="hero__media" data-hero-media>
+    <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/video/hero-poster.webp" data-hero-video>
+      <source src="assets/video/hero.mp4" type="video/mp4" media="(min-aspect-ratio: 4/5)">
+      <source src="assets/video/hero-m.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero__shade"></div>
+  <div class="hero__content">
+    <p class="eyebrow eyebrow--light hero__eyebrow" data-hero-in>Абхазия · Багрипш<span class="hide-sm"> · Холодная речка</span></p>
+    <h1 class="hero__title" data-split>Просыпаться<br>под шум <em>моря</em></h1>
+    <ul class="hero__facts" data-hero-in>
+      <li>Всего 4 номера</li>
+      <li>Балкон с видом на море в каждом</li>
+      <li>5 минут пешком до пляжа</li>
+    </ul>
+    <p class="hero__price" data-hero-in><b>3 500–4 000 ₽</b> за номер в сутки · до 3 гостей</p>
+    <div class="hero__actions" data-hero-in>
+      <a class="btn btn--mandarin" href="#prices" data-magnetic>Узнать свободные даты <span class="btn__arrow">→</span></a>
+      <a class="btn btn--glass" href="#rooms">Посмотреть номер</a>
+    </div>
+  </div>
+  <div class="hero__bar" data-hero-in>
+    <div class="chip chip--glass" data-weather hidden>
+      <span class="chip__dot"></span>
+      <span>Сейчас в Багрипше <b data-w-time>—</b></span>
+      <span class="chip__sep"></span>
+      <span data-w-air>—</span>
+      <span class="chip__sep"></span>
+      <span>море <b data-w-sea>—</b></span>
+    </div>
+    <div class="chip chip--glass" data-season-chip>Сезон: 1 мая — 31 октября</div>
+    <button class="sound" data-sound aria-pressed="false">
+      <span class="sound__bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span data-sound-label>Звук моря</span>
+    </button>
+  </div>
+  <a class="hero__badge" href="#view" aria-label="Листать вниз">
+    <svg viewBox="0 0 120 120" aria-hidden="true">
+      <defs><path id="circ" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs>
+      <text><textPath href="#circ" textLength="286" lengthAdjust="spacing">море · горы · мандарины · магнолии ·</textPath></text>
+    </svg>
+    <span class="hero__badge-arrow">↓</span>
+  </a>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track" data-marquee>
+    <span>Чёрное море</span><i>✺</i><span>Кавказские горы</span><i>✺</i><span>Мандарины и хурма</span><i>✺</i><span>Магнолии</span><i>✺</i><span>Вид с балкона</span><i>✺</i><span>5 минут до пляжа</span><i>✺</i>
+    <span>Чёрное море</span><i>✺</i><span>Кавказские горы</span><i>✺</i><span>Мандарины и хурма</span><i>✺</i><span>Магнолии</span><i>✺</i><span>Вид с балкона</span><i>✺</i><span>5 минут до пляжа</span><i>✺</i>
+  </div>
+</div>
+
+<!-- ============ 08:00 CURTAINS ============ -->
+<section class="curtain" id="view" data-time="08:00" data-curtain>
+  <div class="curtain__sticky">
+    <div class="curtain__window" data-curtain-window>
+      <video class="curtain__video" muted loop playsinline preload="none" poster="assets/video/view-poster.webp" data-lazy-video>
+        <source data-src="assets/video/view.mp4" type="video/mp4">
+      </video>
+      <div class="curtain__glow"></div>
+      <div class="curtain__text" data-curtain-text>
+        <p class="eyebrow eyebrow--light">08:00 · Утро</p>
+        <h2>Ваш вид<br><em>с балкона</em></h2>
+        <p>Такой вид — из каждого номера: у каждого свой балкон с видом на Чёрное море. Утренний кофе — под шум прибоя.</p>
+      </div>
+    </div>
+    <div class="curtain__rod" data-curtain-rod></div>
+    <div class="curtain__panel curtain__panel--l" data-curtain-l></div>
+    <div class="curtain__panel curtain__panel--r" data-curtain-r></div>
+    <div class="curtain__hint" data-curtain-hint>
+      <span>Раздвиньте шторы</span>
+      <i class="curtain__mouse"></i>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10:00 ROOMS ============ -->
+<section class="rooms section" id="rooms" data-time="10:00">
+  <div class="container rooms__grid">
+    <div class="gallery reveal" data-gallery>
+      <div class="gallery__frame" data-cursor="Открыть">
+        <div class="gallery__slides" data-slides></div>
+        <div class="gallery__spots" data-spots></div>
+        <div class="gallery__count"><b data-g-cur>01</b> / <span data-g-total>05</span></div>
+        <div class="gallery__nav">
+          <button class="round" data-g-prev aria-label="Предыдущее фото">←</button>
+          <button class="round" data-g-next aria-label="Следующее фото">→</button>
+        </div>
+        <p class="gallery__tip">Нажмите на <i></i> — расскажем, что где</p>
+      </div>
+      <p class="gallery__cap" data-g-cap></p>
+      <div class="gallery__thumbs" data-thumbs></div>
+    </div>
+
+    <div class="rooms__info">
+      <p class="eyebrow reveal">10:00 · Ваш номер</p>
+      <h2 class="h2 reveal">Светлый номер<br>с балконом на <em>море</em></h2>
+      <p class="lead reveal">Каждый номер рассчитан на трёх гостей — удобно семье или компании друзей. Всего в доме четыре номера, поэтому здесь спокойно и по-домашнему.</p>
+      <ul class="amen reveal">
+        <li><svg viewBox="0 0 32 32"><path d="M16 3v26M5 9.5l22 13M5 22.5l22-13M12 5l4 3 4-3M12 27l4-3 4 3M4.5 14l4.5 2.5L4.5 19M27.5 14 23 16.5l4.5 2.5"/></svg>Кондиционер</li>
+        <li><svg viewBox="0 0 32 32"><path d="M4 12.5a17 17 0 0 1 24 0M8 17a11 11 0 0 1 16 0M12 21.5a5 5 0 0 1 8 0"/><circle cx="16" cy="25.5" r="1.6" class="fill"/></svg>Wi‑Fi</li>
+        <li><svg viewBox="0 0 32 32"><rect x="4" y="7" width="24" height="15" rx="2"/><path d="M11 27h10M16 22v5"/></svg>Телевизор</li>
+        <li><svg viewBox="0 0 32 32"><path d="M8 28V9a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v1"/><path d="M13 13h10l-1.5 3h-7z"/><path d="M15 19v2M18 19v3M21 19v2M16.5 24v1M19.5 24v1"/></svg>Санузел с душем</li>
+        <li><svg viewBox="0 0 32 32"><path d="M6 12a7 7 0 0 1 7-7h10v10H13a7 7 0 0 1-7-3z"/><path d="M14 15l-2 12h4l2-12M23 7h4M23 13h4"/></svg>Фен</li>
+        <li><svg viewBox="0 0 32 32"><path d="M3 17h26M5 17v10M11 17v10M17 17v10M23 17v10M29 17v10M3 27h26"/><path d="M9 11a7 7 0 0 1 14 0"/><path d="M16 2v2M7 5l1.5 1.5M25 5l-1.5 1.5"/></svg>Балкон с видом на море</li>
+      </ul>
+      <div class="price-tag reveal">
+        <div><small>от</small><b>3 500 ₽</b><span>за номер в сутки</span></div>
+        <a class="link" href="#prices">Все цены и калькулятор →</a>
+      </div>
+      <div class="rooms__actions reveal">
+        <a class="btn btn--sea" href="#prices" data-magnetic>Узнать свободные даты <span class="btn__arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats" aria-label="Коротко о главном">
+  <img class="deco deco--branch" src="assets/art/mandarin-branch.webp" alt="" aria-hidden="true" data-parallax="-0.12" loading="lazy">
+  <div class="container">
+    <p class="eyebrow reveal">Коротко о главном</p>
+    <ul class="stats__list">
+      <li class="reveal"><b data-countup="5">0</b><span>минут пешком<br>до пляжа</span></li>
+      <li class="reveal"><b data-countup="4">0</b><span>номера — тихо<br>и по-домашнему</span></li>
+      <li class="reveal"><b data-countup="3">0</b><span>гостя<br>в каждом номере</span></li>
+      <li class="reveal"><b data-countup="10">0</b><span>км от границы<br>на Псоу</span></li>
+      <li class="reveal"><b data-countup="15">0</b><span>км до центра<br>Гагры</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 12:00 LIFE ============ -->
+<section class="life section" id="life" data-time="12:00">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow reveal">12:00 · Всё как дома</p>
+        <h2 class="h2 reveal">Готовьте сами<br>или <em>отдыхайте</em> от плиты</h2>
+      </div>
+      <p class="lead reveal">Питание не входит в стоимость — и это свобода: общая кухня с посудой для тех, кто любит готовить, и кафе-столовая с мангалом на первом этаже для всех остальных.</p>
+    </div>
+
+    <div class="bento">
+      <article class="card card--photo card--a reveal" data-tilt>
+        <video muted loop playsinline preload="none" poster="assets/video/terrace-poster.webp" data-lazy-video>
+          <source data-src="assets/video/terrace.mp4" type="video/mp4">
+        </video>
+        <div class="card__body"><span class="tag">Терраса</span><h3>Круглое окно в море</h3><p>Синие скамейки, стол и вид на пальму и море — место для вечернего чая после пляжа.</p></div>
+      </article>
+      <article class="card card--photo card--b reveal" data-tilt>
+        <img src="assets/img/kitchen-window-704.webp" alt="Светлая общая кухня со столиками у большого окна" loading="lazy">
+        <div class="card__body"><span class="tag">Общая кухня</span><h3>Четыре столика — по одному на номер</h3><p>Большие окна с видом на зелень и море.</p></div>
+      </article>
+      <article class="card card--photo card--c reveal" data-tilt>
+        <img src="assets/img/kitchen-704.webp" alt="Кухня: плита, микроволновка, шкафы с посудой" loading="lazy">
+        <div class="card__body"><h3>Всё для готовки</h3><p>Холодильники, плита, микроволновка, термопот и посуда.</p></div>
+      </article>
+      <article class="card card--mandarin card--d reveal" data-tilt>
+        <svg class="card__icon flame" viewBox="0 0 64 64" aria-hidden="true"><path class="flame__outer" d="M32 6c3 10 14 14 14 28a14 14 0 0 1-28 0c0-8 5-12 7-18 2 5 4 7 6 7-2-6-1-12 1-17z"/><path class="flame__inner" d="M32 30c2 5 7 7 7 13a7 7 0 0 1-14 0c0-4 3-6 4-9 1 2 2 3 3 3-1-3 0-5 0-7z"/><path d="M14 58h36" class="flame__grill"/></svg>
+        <div class="card__body"><span class="tag tag--light">Первый этаж</span><h3>Кафе-столовая с мангалом</h3><p>Не хочется готовить — спуститесь вниз.</p></div>
+      </article>
+      <article class="card card--photo card--e reveal" data-tilt>
+        <img src="assets/img/house-1400.webp" srcset="assets/img/house-720.webp 720w, assets/img/house-1400.webp 1400w" sizes="(max-width: 980px) 92vw, 48vw" alt="Здание гостевого дома у дороги вдоль моря" loading="lazy">
+        <div class="card__body"><span class="tag">В этом же здании</span><h3>Магазин, парикмахерская, сувениры</h3><p>Продукты к завтраку и подарки домой — не выходя на улицу.</p></div>
+      </article>
+      <article class="card card--sea card--f reveal" data-tilt>
+        <svg class="card__icon washer" viewBox="0 0 64 64" aria-hidden="true"><rect x="12" y="6" width="40" height="52" rx="6"/><path d="M12 18h40"/><circle cx="20" cy="12" r="1.8" class="fill"/><circle cx="27" cy="12" r="1.8" class="fill"/><circle cx="32" cy="38" r="13"/><g class="washer__drum"><path d="M24 38c4-4 12 4 16 0"/><circle cx="28" cy="33" r="1.4" class="fill"/><circle cx="36" cy="43" r="1.4" class="fill"/></g></svg>
+        <div class="card__body"><span class="tag tag--light">Хозкомната</span><h3>Стирка и глажка</h3><p>Стиральная машина, утюг с гладильной доской и пылесос.</p></div>
+      </article>
+      <article class="card card--turq card--g reveal" data-tilt>
+        <div class="walk" aria-hidden="true"><span class="walk__min" data-countup="5">0</span><span class="walk__label">минут</span></div>
+        <svg class="card__waves" viewBox="0 0 400 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30c33-14 67-14 100 0s67 14 100 0 67-14 100 0 67 14 100 0v30H0z"/></svg>
+        <div class="card__body"><h3>До пляжа — пешком</h3><p>Через подземный переход, без машины и автобусов.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 14:00 PLACE ============ -->
+<section class="place section" id="place" data-time="14:00">
+  <img class="deco deco--palm" src="assets/art/palm.webp" alt="" aria-hidden="true" data-parallax="0.18" loading="lazy">
+  <div class="container place__intro">
+    <div>
+      <p class="eyebrow reveal">14:00 · Холодная речка</p>
+      <h2 class="h2 reveal">Зелёный уголок<br>Абхазии, где <em>горы</em><br>спускаются к морю</h2>
+    </div>
+    <div class="place__text">
+      <p class="lead reveal">Посёлок Багрипш, или Холодная речка, — живописное место на склоне Гагрского хребта: в 10 км от границы и в 15 км от центра Гагры.</p>
+      <p class="reveal">Чистейший воздух, прекрасная природа, разнообразие экскурсий, незабываемые виды, вкусная еда и чистое море. Осенью здесь продают мандарины и хурму прямо у дороги, а весной и летом цветут магнолии.</p>
+    </div>
   </div>
 
-<div class="container__us">
-  <div id="about__us" class="about__us">
-<div class="title-container">
-        <div class="title__us">
-        <h2>
-            Поселок Багрипш, или Холодная речка — живописный зеленый уголок в Абхазии, расположенный на склоне Гагрского хребта в 10 км от границы и 15 км от центра Гагры.
-            Чистейший воздух, прекрасная природа, разнообразие экскурсий, незабываемые виды, вкусная еда, чистое море.
-        </h2> 
+  <div class="hgallery" data-hgallery>
+    <div class="hgallery__sticky">
+      <div class="hgallery__track" data-htrack>
+        <figure class="hcard hcard--wide">
+          <img src="assets/img/coast-1200.webp" srcset="assets/img/coast-960.webp 960w, assets/img/coast-1200.webp 1200w" sizes="(max-width: 900px) 90vw, 60vw" alt="Изумрудное море и побережье Холодной речки с высоты" loading="lazy">
+          <figcaption><i>01</i>Изумрудная вода у Холодной речки</figcaption>
+        </figure>
+        <figure class="hcard">
+          <video muted playsinline preload="none" poster="assets/video/magnolia-poster.webp" data-lazy-video data-once><source data-src="assets/video/magnolia.mp4" type="video/mp4"></video>
+          <figcaption><i>02</i>Магнолии в цвету</figcaption>
+        </figure>
+        <figure class="hcard">
+          <img src="assets/img/mandarins-960.webp" srcset="assets/img/mandarins-720.webp 720w, assets/img/mandarins-960.webp 960w" sizes="(max-width: 900px) 70vw, 30vw" alt="Спелые абхазские мандарины" loading="lazy">
+          <figcaption><i>03</i>Абхазские мандарины</figcaption>
+        </figure>
+        <figure class="hcard">
+          <img src="assets/img/road-960.webp" srcset="assets/img/road-720.webp 720w, assets/img/road-960.webp 960w" sizes="(max-width: 900px) 70vw, 30vw" alt="Дорога вдоль моря" loading="lazy">
+          <figcaption><i>04</i>Дорога вдоль моря</figcaption>
+        </figure>
+        <figure class="hcard">
+          <img src="assets/img/market-960.webp" srcset="assets/img/market-720.webp 720w, assets/img/market-960.webp 960w" sizes="(max-width: 900px) 70vw, 30vw" alt="Мандарины, фейхоа и цветы на придорожном развале" loading="lazy">
+          <figcaption><i>05</i>Фрукты прямо у дороги</figcaption>
+        </figure>
+        <figure class="hcard">
+          <img src="assets/img/persimmons-960.webp" srcset="assets/img/persimmons-720.webp 720w, assets/img/persimmons-960.webp 960w" sizes="(max-width: 900px) 70vw, 30vw" alt="Хурма дозревает на солнце" loading="lazy">
+          <figcaption><i>06</i>Хурма дозревает на солнце</figcaption>
+        </figure>
+        <figure class="hcard">
+          <img src="assets/img/morning-960.webp" srcset="assets/img/morning-720.webp 720w, assets/img/morning-960.webp 960w" sizes="(max-width: 900px) 70vw, 30vw" alt="Солнечное утро на балконе" loading="lazy">
+          <figcaption><i>07</i>Утро на балконе</figcaption>
+        </figure>
+        <div class="hcard hcard--end">
+          <p>Хватит смотреть на фото —<br><em>пора увидеть вживую</em></p>
+          <a class="btn btn--mandarin" href="#prices" data-magnetic>Узнать свободные даты →</a>
         </div>
+      </div>
+      <div class="hgallery__progress"><i data-hprogress></i></div>
+      <p class="hgallery__hint">Листайте вбок →</p>
+    </div>
+  </div>
+
+  <!-- route -->
+  <div class="container route" id="route">
+    <div class="route__text">
+      <p class="eyebrow reveal">Как добраться</p>
+      <h3 class="h3 reveal">От аэропорта Сочи<br>до моря у нас — <em>рукой подать</em></h3>
+      <ol class="steps">
+        <li class="reveal"><b>1</b><div><h4>Прилетайте в Сочи (Адлер)</h4><p>Аэропорт и вокзал Адлера — совсем рядом с границей.</p></div></li>
+        <li class="reveal"><b>2</b><div><h4>Пересеките границу на Псоу</h4><p>Гражданам России достаточно внутреннего паспорта.</p></div></li>
+        <li class="reveal"><b>3</b><div><h4>Ещё 10 км вдоль моря</h4><p>И вы в Холодной речке. До центра Гагры отсюда — 15 км.</p></div></li>
+      </ol>
+    </div>
+    <div class="map reveal" data-map>
+      <svg viewBox="0 0 640 460" role="img" aria-label="Схема: Адлер, граница Псоу, Холодная речка, Гагра, Пицунда, Новый Афон, озеро Рица">
+        <defs>
+          <linearGradient id="seaG" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#0b5a66"/><stop offset="1" stop-color="#2fb4b9"/></linearGradient>
+          <pattern id="ripples" width="40" height="16" patternUnits="userSpaceOnUse"><path d="M0 8c5-4 10-4 15 0s10 4 15 0" stroke="rgba(255,255,255,.18)" fill="none" stroke-width="1.4"/></pattern>
+        </defs>
+        <rect width="640" height="460" fill="url(#seaG)"/>
+        <rect width="640" height="460" fill="url(#ripples)" class="map__ripples"/>
+        <path class="map__land" d="M0 70C30 80 45 90 60 92S110 102 130 104S210 132 250 152S300 180 318 188S350 210 358 236S366 276 380 274S420 262 440 280S500 330 520 345S600 395 640 410V0H0Z"/>
+        <path class="map__coast" d="M0 70C30 80 45 90 60 92S110 102 130 104S210 132 250 152S300 180 318 188S350 210 358 236S366 276 380 274S420 262 440 280S500 330 520 345S600 395 640 410"/>
+        <g class="map__mountains">
+          <path d="M290 112l24-32 24 32zM326 118l20-26 20 26zM250 92l20-26 20 26zM400 150l24-30 24 30zM520 210l22-28 22 28zM560 170l18-22 18 22zM360 70l18-22 18 22zM210 64l16-20 16 20z"/>
+        </g>
+        <path class="map__lake" d="M448 92c10-8 26-6 30 4s-6 18-18 18-20-12-12-22z"/>
+        <text x="486" y="92" class="map__label map__label--sm">оз. Рица</text>
+        <path class="map__border" d="M130 104 L142 14"/>
+        <path class="map__route" d="M60 92S110 102 130 104S210 132 250 152" data-route/>
+        <g class="map__pt"><circle cx="60" cy="92" r="6"/><text x="16" y="62" class="map__label">Адлер ✈</text></g>
+        <g class="map__pt"><circle cx="130" cy="104" r="5"/><text x="150" y="40" class="map__label map__label--sm">граница Псоу</text></g>
+        <g class="map__pt map__pt--home" data-home>
+          <circle cx="250" cy="152" r="18" class="map__pulse"/>
+          <circle cx="250" cy="152" r="8"/>
+          <text x="150" y="196" class="map__label map__label--home">Холодная речка</text>
+          <text x="192" y="218" class="map__label map__label--sm map__label--light">мы здесь</text>
+        </g>
+        <g class="map__pt"><circle cx="318" cy="188" r="5"/><text x="334" y="186" class="map__label">Гагра · 15 км</text></g>
+        <g class="map__pt"><circle cx="379" cy="274" r="5"/><text x="300" y="306" class="map__label map__label--light">Пицунда</text></g>
+        <g class="map__pt"><circle cx="520" cy="345" r="5"/><text x="420" y="382" class="map__label map__label--light">Новый Афон</text></g>
+        <text x="40" y="410" class="map__sea">Чёрное море</text>
+      </svg>
+      <p class="map__note">Схема не в масштабе. Точная точка на карте — внизу страницы.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 18:00 PRICES ============ -->
+<section class="prices section" id="prices" data-time="18:00">
+  <img class="deco deco--mandarin" src="assets/art/mandarin-branch.webp" alt="" aria-hidden="true" data-parallax="0.1" loading="lazy">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow reveal">18:00 · Стоимость</p>
+        <h2 class="h2 reveal">Посчитайте свой<br><em>отпуск у моря</em></h2>
+      </div>
+      <p class="lead reveal">Цена указана за номер в сутки — до трёх гостей. Выберите даты, и калькулятор сам учтёт сезон, а заявка уйдёт хозяевам в WhatsApp в один клик.</p>
+    </div>
+
+    <div class="seasons reveal" data-seasons>
+      <div class="season" data-season="0"><span>1 мая — 15 июня</span><b>3 500 ₽</b><small>начало лета</small></div>
+      <div class="season season--hot" data-season="1"><span>16 июня — 15 сентября</span><b>4 000 ₽</b><small>разгар сезона</small></div>
+      <div class="season" data-season="2"><span>16 сентября — 31 октября</span><b>3 500 ₽</b><small>бархатный сезон</small></div>
+    </div>
+    <div class="timeline reveal" data-timeline>
+      <div class="timeline__bar">
+        <i style="--from:0;--to:25"></i><i class="hot" style="--from:25;--to:75"></i><i style="--from:75;--to:100"></i>
+        <span class="timeline__range" data-tl-range hidden></span>
+        <span class="timeline__today" data-tl-today hidden><em>сегодня</em></span>
+      </div>
+      <div class="timeline__months"><span>май</span><span>июнь</span><span>июль</span><span>август</span><span>сентябрь</span><span>октябрь</span></div>
+      <p class="timeline__note" data-tl-note></p>
+    </div>
+
+    <form class="calc reveal" data-calc autocomplete="on" onsubmit="return false">
+      <div class="calc__inputs">
+        <p class="calc__label">Быстрый выбор</p>
+        <div class="quick" data-quick>
+          <button type="button" data-q="05-01:05-10">Майские</button>
+          <button type="button" data-q="07-10:07-17">Неделя в июле</button>
+          <button type="button" data-q="08-05:08-15">10 дней в августе</button>
+          <button type="button" data-q="09-16:09-26">Бархатный сезон</button>
+        </div>
+        <div class="calc__row">
+          <label class="field"><span>Заезд</span><input type="date" name="in" data-in required></label>
+          <label class="field"><span>Выезд</span><input type="date" name="out" data-out required></label>
+        </div>
+        <div class="calc__row">
+          <div class="field field--stepper">
+            <span>Гостей</span>
+            <div class="stepper"><button type="button" data-step="-1" aria-label="Меньше гостей">−</button><output data-guests>2</output><button type="button" data-step="1" aria-label="Больше гостей">+</button></div>
+          </div>
+          <label class="field"><span>Как к вам обращаться</span><input type="text" name="name" data-name placeholder="Имя (необязательно)" maxlength="40"></label>
+        </div>
+      </div>
+      <div class="calc__result">
+        <p class="calc__label">Ваш отдых</p>
+        <p class="calc__summary" data-summary>Выберите даты — покажем стоимость</p>
+        <p class="calc__total" data-total-wrap hidden><span data-total>0</span> ₽</p>
+        <ul class="calc__breakdown" data-breakdown></ul>
+        <p class="calc__warn" data-warn hidden></p>
+        <a class="btn btn--mandarin btn--wide" data-wa href="https://wa.me/79281536032" target="_blank" rel="noopener" data-burst data-magnetic>
+          <svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 .9c.3.2.5.2.5.4.1.1.1.7-.1 1.4z" fill="currentColor"/></svg>
+          Уточнить даты в WhatsApp
+        </a>
+        <p class="calc__note">Откроется WhatsApp с датами и стоимостью. Наличие номера подтвердят хозяева.</p>
+        <div class="calc__alt">
+          <button type="button" class="link" data-tg>Или в Telegram</button>
+          <a class="link" href="tel:+79281536032">Позвонить</a>
+        </div>
+      </div>
+    </form>
+    <ul class="terms">
+      <li class="reveal"><b>Цена за номер</b>до 3 гостей, в сутки</li>
+      <li class="reveal"><b>Питание не включено</b>кафе-столовая с мангалом на 1 этаже и общая кухня с посудой</li>
+      <li class="reveal"><b>Сезон</b>с 1 мая по 31 октября</li>
+      <li class="reveal"><b>Предоплата, заезд и выезд</b>уточните у хозяев в WhatsApp — ответят лично</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 20:00 FAQ ============ -->
+<section class="faq section" id="faq" data-time="20:00">
+  <img class="deco deco--magnolia" src="assets/art/magnolia.webp" alt="" aria-hidden="true" data-parallax="-0.1" loading="lazy">
+  <div class="container faq__grid">
+    <div>
+      <p class="eyebrow eyebrow--light reveal">20:00 · Вопросы</p>
+      <h2 class="h2 reveal">Что обычно<br>спрашивают <em>перед поездкой</em></h2>
+      <p class="lead reveal">Не нашли ответ? Напишите — ответим лично.</p>
+      <a class="btn btn--glass reveal" href="https://t.me/Tanya_Tkachenko_0521" target="_blank" rel="noopener">Спросить в Telegram</a>
+    </div>
+    <div class="acc" data-acc>
+      <div class="acc__item reveal"><button class="acc__q" aria-expanded="false">Сколько человек размещается в номере?<i></i></button><div class="acc__a"><div><p>До трёх гостей. Всего в доме четыре номера — тихо и по-домашнему. Если вас больше, возьмите два номера: калькулятор посчитает это сам.</p></div></div></div>
+      <div class="acc__item reveal"><button class="acc__q" aria-expanded="false">Что есть в номере?<i></i></button><div class="acc__a"><div><p>Кондиционер, телевизор, Wi‑Fi, санузел с душем и феном и балкон с видом на море.</p></div></div></div>
+      <div class="acc__item reveal"><button class="acc__q" aria-expanded="false">Питание входит в стоимость?<i></i></button><div class="acc__a"><div><p>Нет. На первом этаже работает кафе-столовая с мангалом, а на общей кухне можно готовить самим: там холодильники, плита, микроволновка, термопот и посуда, у каждого номера свой столик.</p></div></div></div>
+      <div class="acc__item reveal"><button class="acc__q" aria-expanded="false">Далеко ли до моря?<i></i></button><div class="acc__a"><div><p>Около 5 минут пешком: через подземный переход под дорогой — и вы на пляже. Как удобнее спуститься с детьми или вещами, подскажут хозяева.</p></div></div></div>
+      <div class="acc__item reveal"><button class="acc__q" aria-expanded="false">Можно ли постирать вещи?<i></i></button><div class="acc__a"><div><p>Да, есть хозяйственная комната: стиральная машина, утюг с гладильной доской и пылесос.</p></div></div></div>
+      <div class="acc__item reveal"><button class="acc__q" aria-expanded="false">Какие документы нужны для въезда в Абхазию?<i></i></button><div class="acc__a"><div><p>Гражданам России достаточно внутреннего паспорта. Правила для детей и для граждан других стран лучше проверить перед поездкой.</p></div></div></div>
+      <div class="acc__item reveal"><button class="acc__q" aria-expanded="false">Какая валюта в Абхазии?<i></i></button><div class="acc__a"><div><p>Российский рубль — менять деньги не нужно.</p></div></div></div>
+      <div class="acc__item reveal"><button class="acc__q" aria-expanded="false">Когда сезон и сколько стоит номер?<i></i></button><div class="acc__a"><div><p>Принимаем гостей с 1 мая по 31 октября. С 1 мая по 15 июня и с 16 сентября по 31 октября — 3 500 ₽ за номер в сутки, с 16 июня по 15 сентября — 4 000 ₽.</p></div></div></div>
+      <div class="acc__item reveal"><button class="acc__q" aria-expanded="false">Как забронировать?<i></i></button><div class="acc__a"><div><p>Выберите даты в калькуляторе и нажмите «Уточнить даты в WhatsApp» — сообщение с датами и расчётом составится само. Хозяева ответят и подтвердят свободные номера.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 22:00 NIGHT / CONTACTS ============ -->
+<section class="night" id="contacts" data-time="22:00">
+  <canvas class="night__sky" data-sky aria-hidden="true"></canvas>
+  <div class="night__moon" aria-hidden="true"></div>
+  <div class="night__sea" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="container night__inner">
+    <p class="eyebrow eyebrow--light reveal">22:00 · До встречи</p>
+    <h2 class="night__title reveal">Выберите даты.<br><em>Напишите хозяевам.</em></h2>
+    <p class="night__lead reveal">Море уже ждёт — осталось договориться о датах.</p>
+    <div class="night__actions reveal">
+      <a class="btn btn--mandarin" href="#prices" data-magnetic>Узнать свободные даты <span class="btn__arrow">→</span></a>
+      <a class="btn btn--glass" href="https://wa.me/79281536032?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BE%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D1%8B%D1%85%20%D0%BD%D0%BE%D0%BC%D0%B5%D1%80%D0%B0%D1%85." target="_blank" rel="noopener" data-burst>Написать в WhatsApp</a>
+    </div>
+    <ul class="contacts reveal">
+      <li><a href="tel:+79281536032"><small>Телефон и WhatsApp</small>+7 928 153-60-32</a></li>
+      <li><a href="https://t.me/Tanya_Tkachenko_0521" target="_blank" rel="noopener"><small>Telegram</small>@Tanya_<wbr>Tkachenko_<wbr>0521</a></li>
+      <li><a href="https://instagram.com/tonika.tank7370" target="_blank" rel="noopener"><small>Instagram</small>@tonika.tank7370</a></li>
+      <li><a href="mailto:Tank5673@mail.ru?subject=%D0%92%D0%BE%D0%BF%D1%80%D0%BE%D1%81%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0"><small>Почта</small>Tank5673@mail.ru</a></li>
+    </ul>
+    <div class="mapframe reveal" data-mapframe>
+      <button class="mapframe__cover" data-map-load>
+        <span class="mapframe__pin"></span>
+        <b>Показать дом на карте</b>
+        <small>Яндекс Карты · Багрипш, Абхазия</small>
+      </button>
+    </div>
+    <footer class="footer">
+      <a class="logo logo--light" href="#top"><svg class="logo__mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M18 34a14 14 0 0 1 28 0z" fill="#f2852a"/><path d="M10 41c5-4 9-4 14 0s9 4 14 0 9-4 14 0" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M14 50c4-3 8-3 12 0s8 3 12 0 8-3 12 0" stroke="#2fb4b9" stroke-width="4" fill="none" stroke-linecap="round"/></svg><span class="logo__text">Холодная речка<small>гостевой дом · Абхазия</small></span></a>
+      <p>Багрипш (Холодная речка), Гагрский район, Абхазия · сезон с 1 мая по 31 октября</p>
+      <a class="link" href="#top">Наверх ↑</a>
+    </footer>
+  </div>
+</section>
+
+</main>
+
+<!-- mobile sticky CTA -->
+<div class="dock" data-dock>
+  <a class="btn btn--mandarin" href="#prices">Узнать свободные даты</a>
+  <a class="dock__wa" href="https://wa.me/79281536032?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BE%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D1%8B%D1%85%20%D0%BD%D0%BE%D0%BC%D0%B5%D1%80%D0%B0%D1%85." target="_blank" rel="noopener" aria-label="Написать в WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 .9c.3.2.5.2.5.4.1.1.1.7-.1 1.4z" fill="currentColor"/></svg></a>
 </div>
-<div class="wrapper">
-<div class="slider">
-    <div class="slider__item">
-        <img src="/холодная речка/1.jpeg" alt="">
-    </div>
-    <div class="slider__item">
-        <img src="/холодная речка/4.jpeg" alt="">
-    </div>
-    <div class="slider__item">
-        <img src="/холодная речка/5.jpeg" alt="">
-    </div>
-    <div class="slider__item">
-        <img src="/холодная речка/6.jpeg" alt="">
-    </div>
-    <div class="slider__item">
-        <img src="/холодная речка/7.jpeg" alt="">
-    </div>
-    <div class="slider__item">
-        <img src="/холодная речка/8.jpeg" alt="">
-    </div>
-    <div class="slider__item">
-        <img src="/холодная речка/9.jpeg" alt="">
-    </div>
-</div>
-</div>
-</div>
+
+<!-- lightbox -->
+<div class="lightbox" data-lightbox role="dialog" aria-modal="true" aria-label="Фотографии номера" hidden>
+  <button class="lightbox__close round" data-lb-close aria-label="Закрыть">✕</button>
+  <button class="lightbox__prev round" data-lb-prev aria-label="Предыдущее">←</button>
+  <img data-lb-img alt="">
+  <button class="lightbox__next round" data-lb-next aria-label="Следующее">→</button>
+  <p class="lightbox__cap" data-lb-cap></p>
 </div>
 
-       
-<footer>
+<div class="toast" data-toast role="status" aria-live="polite"></div>
+<canvas class="burst" data-burst-canvas aria-hidden="true"></canvas>
+<div class="cursor" data-cursor-el aria-hidden="true"><span data-cursor-label></span></div>
 
-<div id="social" class="footer">
-
-<a href="https://wa.me/79281536032?text=Здравствуйте, я зашел на Ваш сайт и у меня есть вопрос:"><img class='icon' src="/иконки/whatsapp (2).svg" alt=""></a>
-<a href="https://t.me/Tanya_Tkachenko_0521"><img class='icon-t' src="/иконки/telegram_logo_icon_168692.svg" alt=""></a>
-<a href="https://instagram.com/tonika.tank7370?igshid=YzgyMTM2MGM="><img class='icon' src="/иконки/insta.svg" alt=""></a>
-<a href="mailto:Tank5673@mail.ru?subject=Вопрос с сайта&amp;body=Здравствуйте, я зашел на Ваш сайт и у меня есть вопрос:"><img class='icon' src="/иконки/почта.svg" alt=""></a>
-
-
-<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4797ed7a1e0a8c85d76318c64fe9108c1502723730c366cc40352f549155dfad&amp;width=100%25&amp;height=300&amp;lang=ru_RU&amp;scroll=true"></script>
-
-</div>
-</footer>
-
-
-  
-    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
-    
-    <script src="/js/jquery-3.6.4.js"></script>
-
-    <script src="js/slick.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
-    <script src="js/script.js"></script>
-        
-
-      
-    </script>
+<script src="assets/app.js" defer></script>
 </body>
 </html>
