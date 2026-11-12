@@ -181,74 +181,37 @@
   }
 
   /* ================= place gallery ================= */
-  // Never blocks the page: on desktop the strip drifts sideways while the page scrolls past it,
-  // arrows / drag add an offset; on touch screens it is a native swipe strip. Tap opens the photo.
+  // A plain horizontal strip: native scroll / swipe, big side arrows glide one photo, tap opens the photo.
+  // The page wheel always scrolls the page.
   const hg = $('[data-hgallery]');
   if (hg) {
-    const view = $('[data-hview]', hg), track = $('[data-htrack]', hg), prog = $('[data-hprogress]', hg);
+    const view = $('[data-hview]', hg), prog = $('[data-hprogress]', hg);
     const prev = $('[data-hprev]', hg), next = $('[data-hnext]', hg);
-    const figs = $$('figure[data-full]', track);
+    const figs = $$('figure[data-full]', hg);
     const items = figs.map(f => ({ src: f.dataset.full, alt: f.dataset.alt }));
-    const touchMq = matchMedia('(hover: none), (max-width: 900px)');
-    const touch = () => touchMq.matches;
-    let dist = 0, manual = 0, cur = 0, target = 0, step = 444, raf = 0;
-    const measure = () => {
-      dist = touch() ? Math.max(0, view.scrollWidth - view.clientWidth) : Math.max(0, track.scrollWidth - view.clientWidth);
-      const c = figs[1] || figs[0]; step = c ? c.offsetWidth + 24 : 444;
+    const ui = () => {
+      const dist = Math.max(0, view.scrollWidth - view.clientWidth), x = view.scrollLeft;
+      prog.style.setProperty('--hp', dist ? (x / dist).toFixed(4) : 0);
+      prev.disabled = x < 8; next.disabled = x > dist - 8;
     };
-    const base = () => {
-      if (reduced) return 0;
-      const r = hg.getBoundingClientRect();
-      return clamp((innerHeight - r.top) / (innerHeight + r.height * .6), 0, 1) * dist * .85;
-    };
-    const setUi = pos => {
-      const p = dist ? pos / dist : 0;
-      prog.style.setProperty('--hp', p.toFixed(4));
-      prev.disabled = p < .01; next.disabled = p > .99;
-    };
-    const tick = () => {
-      raf = 0;
-      if (touch()) return;
-      const b = base();
-      target = clamp(b + manual, 0, dist); manual = target - b;
-      cur = reduced ? target : lerp(cur, target, .14);
-      if (Math.abs(cur - target) < .5) cur = target;
-      track.style.transform = `translate3d(${(-cur).toFixed(1)}px,0,0)`;
-      setUi(cur);
-      if (cur !== target) kick();
-    };
-    const kick = () => { if (!raf) raf = requestAnimationFrame(tick); };
     const go = d => {
-      if (touch()) { view.scrollBy({ left: d * step, behavior: reduced ? 'auto' : 'smooth' }); return; }
-      manual += d * step; kick();
+      const x = view.scrollLeft, pad = parseFloat(getComputedStyle(view).scrollPaddingLeft) || 0;
+      const lefts = figs.map(f => f.offsetLeft - pad);
+      let t = d > 0 ? lefts.find(l => l > x + 8) : [...lefts].reverse().find(l => l < x - 8);
+      if (t === undefined) t = d > 0 ? view.scrollWidth : 0;
+      view.scrollTo({ left: t, behavior: reduced ? 'auto' : 'smooth' });
     };
     prev.addEventListener('click', () => go(-1));
     next.addEventListener('click', () => go(1));
-    addEventListener('scroll', kick, { passive: true });
-    view.addEventListener('scroll', () => { if (touch()) { measure(); setUi(view.scrollLeft); } }, { passive: true });
-    let down = null, moved = 0;
-    view.addEventListener('pointerdown', e => {
-      if (touch() || e.button !== 0) return;
-      down = { x: e.clientX, m: manual }; moved = 0;
-    });
-    addEventListener('pointermove', e => {
-      if (!down) return;
-      const dx = e.clientX - down.x; moved = Math.max(moved, Math.abs(dx));
-      if (moved > 6) { view.classList.add('drag'); manual = down.m - dx; kick(); }
-    });
-    addEventListener('pointerup', () => { if (down) { down = null; setTimeout(() => view.classList.remove('drag'), 0); } });
+    view.addEventListener('scroll', ui, { passive: true });
+    addEventListener('resize', ui); addEventListener('load', ui); ui();
     figs.forEach((f, k) => {
       f.tabIndex = 0; f.setAttribute('role', 'button');
       f.setAttribute('aria-label', 'Открыть фото: ' + f.dataset.alt);
       const open = () => LB.open(items, k, 'Фотографии окрестностей');
-      f.addEventListener('click', () => { if (moved > 6) { moved = 0; return; } open(); });
+      f.addEventListener('click', open);
       f.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
     });
-    const reset = () => { track.style.transform = ''; manual = 0; cur = 0; measure(); setUi(touch() ? view.scrollLeft : 0); kick(); };
-    if (touchMq.addEventListener) touchMq.addEventListener('change', reset);
-    addEventListener('resize', () => { measure(); kick(); });
-    addEventListener('load', () => { measure(); kick(); });
-    measure(); setUi(0); kick();
   }
 
   /* ================= prices / calculator ================= */
@@ -292,7 +255,7 @@
       seasonCards.forEach(c => c.classList.remove('active'));
       let total = 0;
       if (!din || !dout) {
-        sumEl.textContent = 'Выберите даты заезда и выезда';
+        sumEl.textContent = 'Выберите даты — покажем стоимость';
       } else if (dout <= din) {
         sumEl.textContent = 'Проверьте даты';
         warnEl.hidden = false; warnEl.textContent = 'Дата выезда должна быть позже даты заезда.';
@@ -374,23 +337,4 @@
     });
   });
 
-  /* ================= phone dock ================= */
-  const dock = $('[data-dock]');
-  if (dock) {
-    const state = { hero: true, calc: false, contacts: false, typing: false, down: false };
-    const upd = () => dock.classList.toggle('show', !state.hero && !state.calc && !state.contacts && !state.typing && !state.down);
-    // hide while the visitor scrolls down (reading), show again on the way up or after a pause
-    let lastY = scrollY, idle = 0;
-    addEventListener('scroll', () => {
-      const y = scrollY, d = y - lastY; lastY = y;
-      if (Math.abs(d) > 6) { state.down = d > 0; upd(); }
-      clearTimeout(idle); idle = setTimeout(() => { state.down = false; upd(); }, 900);
-    }, { passive: true });
-    const watch = (el, key) => el && new IntersectionObserver(([e]) => { state[key] = e.isIntersecting; upd(); }).observe(el);
-    watch($('[data-hero-actions]'), 'hero');
-    watch($('[data-calc]'), 'calc');
-    watch($('#contacts'), 'contacts');
-    addEventListener('focusin', e => { if (e.target.matches('input')) { state.typing = true; upd(); } });
-    addEventListener('focusout', e => { if (e.target.matches('input')) { state.typing = false; upd(); } });
-  }
 })();
