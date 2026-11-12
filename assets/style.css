@@ -389,3 +389,18 @@ p { max-width: 58ch; }
   html { scroll-behavior: auto; }
   * { transition-duration: .01ms !important; }
 }
+
+/* panorama of Kholodnaya Rechka + photo credits */
+.panorama { margin-top: 48px; }
+.panorama__img { aspect-ratio: 2 / 1; border-radius: 24px; overflow: hidden; background: #dfe8e3; }
+.panorama__img img { width: 100%; height: 100%; object-fit: cover; }
+.panorama figcaption { margin-top: 14px; font: 500 20px/30px var(--sans); color: var(--ink); max-width: none; }
+.credit { display: block; margin-top: 4px; font: 400 14px/20px var(--sans); color: var(--ink-2); }
+.credit a { color: inherit; }
+.hcard .credit { font-size: 13px; line-height: 18px; }
+@media (max-width: 900px) {
+  .panorama { margin-top: 28px; }
+  .panorama__img { aspect-ratio: 4 / 3; border-radius: 20px; }
+  .panorama__img img { object-position: 40% 50%; }
+  .panorama figcaption { font-size: 18px; line-height: 27px; }
+}

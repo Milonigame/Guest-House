@@ -209,7 +209,7 @@
       f.tabIndex = 0; f.setAttribute('role', 'button');
       f.setAttribute('aria-label', 'Открыть фото: ' + f.dataset.alt);
       const open = () => LB.open(items, k, 'Фотографии окрестностей');
-      f.addEventListener('click', open);
+      f.addEventListener('click', e => { if (e.target.closest('a')) return; open(); });
       f.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
     });
   }
