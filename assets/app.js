@@ -7,7 +7,6 @@
   const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
   const lerp = (a, b, t) => a + (b - a) * t;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const saveData = !!(navigator.connection && navigator.connection.saveData);
   const body = document.body;
   const PHONE = '79281536032';
   const TG = 'Tanya_Tkachenko_0521';
@@ -61,20 +60,32 @@
   $$('.reveal').forEach(el => revIO.observe(el));
 
   /* ================= videos ================= */
+  // The sea, the balcony view and the magnolia are calm loops the owners want every visitor to see,
+  // so they play even with "reduce motion" or data saving switched on; the hero keeps its pause button.
+  // Phones in power-saving mode refuse to start videos by themselves: then the first tap or key press starts them.
   const heroVideo = $('[data-hero-video]');
-  if (heroVideo && (reduced || saveData)) { heroVideo.removeAttribute('autoplay'); heroVideo.pause(); heroVideo.preload = 'none'; }
+  const start = v => { const p = v.play(); if (p) p.catch(() => {}); };
+  const inView = new Set();
+  let heroStopped = false;   // the visitor paused the hero with its button
   const vidIO = new IntersectionObserver(es => es.forEach(e => {
     const v = e.target;
     if (e.isIntersecting) {
+      inView.add(v);
       if (!v.dataset.loaded) {
         $$('source[data-src]', v).forEach(s => { s.src = s.dataset.src; });
         v.load(); v.dataset.loaded = '1';
       }
       if (v.dataset.once && v.ended) return;   // the magnolia opens once and stays open
-      v.play().catch(() => {});
-    } else if (!v.paused) v.pause();
+      start(v);
+    } else { inView.delete(v); if (!v.paused) v.pause(); }
   }), { rootMargin: '200px 0px' });
-  if (!reduced && !saveData) $$('[data-lazy-video]').forEach(v => vidIO.observe(v));
+  $$('[data-lazy-video]').forEach(v => vidIO.observe(v));
+  const nudge = e => {
+    if (e.target.closest && e.target.closest('[data-hero-pause]')) return;   // the button handles itself
+    if (heroVideo && heroVideo.paused && !heroStopped) start(heroVideo);
+    inView.forEach(v => { if (v.paused && !(v.dataset.once && v.ended)) start(v); });
+  };
+  ['pointerup', 'touchend', 'keydown'].forEach(t => addEventListener(t, nudge, { passive: true }));
 
   // pause / play button on the hero video
   const heroPause = $('[data-hero-pause]');
@@ -85,7 +96,8 @@
       heroPause.setAttribute('aria-label', p ? L('Запустить видео', 'Play video') : L('Остановить видео', 'Pause video'));
     };
     heroPause.addEventListener('click', () => {
-      if (heroVideo.paused) { heroVideo.preload = 'auto'; heroVideo.play().catch(() => {}); } else heroVideo.pause();
+      heroStopped = !heroVideo.paused;
+      if (heroVideo.paused) start(heroVideo); else heroVideo.pause();
     });
     heroVideo.addEventListener('play', sync); heroVideo.addEventListener('pause', sync); sync();
   }
