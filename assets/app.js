@@ -76,6 +76,37 @@
   }), { rootMargin: '200px 0px' });
   if (!reduced && !saveData) $$('[data-lazy-video]').forEach(v => vidIO.observe(v));
 
+  // pause / play button on the hero video
+  const heroPause = $('[data-hero-pause]');
+  if (heroVideo && heroPause) {
+    const sync = () => {
+      const p = heroVideo.paused;
+      heroPause.classList.toggle('paused', p);
+      heroPause.setAttribute('aria-label', p ? L('Запустить видео', 'Play video') : L('Остановить видео', 'Pause video'));
+    };
+    heroPause.addEventListener('click', () => {
+      if (heroVideo.paused) { heroVideo.preload = 'auto'; heroVideo.play().catch(() => {}); } else heroVideo.pause();
+    });
+    heroVideo.addEventListener('play', sync); heroVideo.addEventListener('pause', sync); sync();
+  }
+
+  // "See the view" starts the balcony video even when autoplay is off
+  const viewVideo = $('[data-view-video]');
+  $$('[data-play-view]').forEach(a => a.addEventListener('click', () => {
+    if (!viewVideo) return;
+    if (!viewVideo.dataset.loaded) { $$('source[data-src]', viewVideo).forEach(x => { x.src = x.dataset.src; }); viewVideo.load(); viewVideo.dataset.loaded = '1'; }
+    viewVideo.play().catch(() => {});
+  }));
+
+  // the four perks sit in the hero on wide screens and under the dates card on phones
+  const perks = $('[data-perks]'), perksSlot = $('[data-perks-slot]');
+  if (perks && perksSlot) {
+    const perksHome = perks.parentNode, mq = matchMedia('(max-width: 900px)');
+    const place = () => { const to = mq.matches ? perksSlot : perksHome; if (perks.parentNode !== to) to.append(perks); };
+    if (mq.addEventListener) mq.addEventListener('change', place); else mq.addListener(place);
+    place();
+  }
+
   /* ================= lightbox ================= */
   const LB = (() => {
     const lb = $('[data-lightbox]');
@@ -259,7 +290,7 @@
       seasonCards.forEach(c => c.classList.remove('active'));
       let total = 0;
       if (!din || !dout) {
-        sumEl.textContent = L('Выберите даты — покажем стоимость', 'Choose your dates to see the price');
+        sumEl.textContent = L('Выберите даты — посчитаем стоимость.', 'Choose your dates to calculate the cost.');
       } else if (dout <= din) {
         sumEl.textContent = L('Проверьте даты', 'Check the dates');
         warnEl.hidden = false; warnEl.textContent = L('Дата выезда должна быть позже даты заезда.', 'Check-out must be after check-in.');
@@ -330,6 +361,34 @@
       setTimeout(() => window.open('https://t.me/' + TG, '_blank', 'noopener'), ok ? 650 : 900);
     });
     compute();
+
+    // quick dates card under the hero: fills the calculator and jumps to the result
+    const quick = $('[data-quick]');
+    if (quick) {
+      const qIn = $('[data-q-in]', quick), qOut = $('[data-q-out]', quick), qG = $('[data-q-guests]', quick);
+      qIn.min = iso(today); qOut.min = iso(new Date(+today + 864e5));
+      qIn.addEventListener('change', () => {
+        const d = parse(qIn.value);
+        if (!d) return;
+        const o = parse(qOut.value);
+        qOut.min = iso(new Date(+d + 864e5));
+        if (!o || o <= d) qOut.value = iso(new Date(d.getFullYear(), d.getMonth(), d.getDate() + 7));
+      });
+      quick.addEventListener('submit', e => {
+        e.preventDefault();
+        if (!qIn.value || !qOut.value) {
+          const f = qIn.value ? qOut : qIn;
+          toast(L('Выберите даты заезда и выезда', 'Please choose check-in and check-out dates'));
+          f.focus();
+          try { f.showPicker(); } catch (err) { /* not supported */ }
+          return;
+        }
+        inEl.value = qIn.value; outEl.value = qOut.value; outEl.min = qOut.min;
+        guests = clamp(+qG.value || 2, 1, 12); guestsEl.textContent = guests;
+        compute();
+        $('.calc__result', calc).scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'center' });
+      });
+    }
   }
 
   /* ================= FAQ ================= */

@@ -31,7 +31,7 @@
 <link rel="preload" href="../assets/video/hero-poster.webp" as="image">
 <link rel="icon" href="../favicon.ico" sizes="32x32">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-<link rel="preload" href="../assets/fonts/prata-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/onest-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/golos-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <script>document.documentElement.classList.add('js')</script>
@@ -110,6 +110,11 @@
     },
     {
      "@type": "LocationFeatureSpecification",
+     "name": "Wardrobe",
+     "value": true
+    },
+    {
+     "@type": "LocationFeatureSpecification",
      "name": "Sea-view balcony",
      "value": true
     },
@@ -125,7 +130,12 @@
     },
     {
      "@type": "LocationFeatureSpecification",
-     "name": "Café with barbecue",
+     "name": "Café-canteen with charcoal grill",
+     "value": true
+    },
+    {
+     "@type": "LocationFeatureSpecification",
+     "name": "Terrace with a sea view",
      "value": true
     }
    ],
@@ -158,15 +168,15 @@
      "name": "Where is the Kholodnaya Rechka guest house?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "In the village of Bagripsh (Kholodnaya Rechka), Gagra district, Abkhazia, on a hillside above the sea: 10 km from the Russian border at the Psou river and 15 km from central Gagra."
+      "text": "In the village of Bagripsh (Kholodnaya Rechka), Gagra District, Abkhazia, on a hillside above the sea: 10 km from the Russian border at the Psou river and 15 km from central Gagra."
      }
     },
     {
      "@type": "Question",
-     "name": "How far is the sea?",
+     "name": "How do I reach the beach?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "About 5 minutes on foot: through the underpass below the road and you are on the beach."
+      "text": "About 5 minutes on foot through the pedestrian underpass beneath the road. The beach is pebbly."
      }
     },
     {
@@ -174,15 +184,23 @@
      "name": "How much is a room?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "From 1 May to 15 June and from 16 September to 31 October — 3,500 RUB per room per night; from 16 June to 15 September — 4,000 RUB. Up to three guests per room."
+      "text": "From 1 May to 15 June and from 16 September to 31 October — RUB 3,500 per room per night; from 16 June to 15 September — RUB 4,000. Up to three guests per room."
      }
     },
     {
      "@type": "Question",
-     "name": "Are meals included?",
+     "name": "What about meals?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "No. There is a canteen-café with a barbecue on the ground floor and a shared kitchen where you can cook."
+      "text": "Meals are not included. There is a café-canteen with a charcoal grill on the ground floor, and you can cook in the shared kitchen."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I do laundry?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes: the utility room has a washing machine, an iron and a vacuum cleaner."
      }
     },
     {
@@ -190,15 +208,31 @@
      "name": "How do I book?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Choose your dates in the calculator on the website and tap “Check availability on WhatsApp” — we will reply and confirm a free room."
+      "text": "Fill in the calculator on the website and choose a messenger. It prepares a message with your dates and estimate — you just send it."
      }
     },
     {
      "@type": "Question",
-     "name": "What documents do I need to enter Abkhazia?",
+     "name": "What are the check-in, check-out and deposit terms?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Russian citizens only need an internal passport. Rules for children and for citizens of other countries change — please check them before you travel."
+      "text": "We agree on arrival, departure and deposit arrangements by message."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Which travel documents do I need?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Russian citizens aged 14 and over may enter with a domestic passport. Check current requirements before travelling with children or if you hold another nationality."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Which currency are the rates in?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Russian roubles, the currency used for payments in Abkhazia."
      }
     }
    ]
@@ -218,58 +252,82 @@
     </a>
     <nav class="nav" aria-label="Sections">
       <a href="#room">Rooms</a>
-      <a href="#life">House</a>
-      <a href="#place">Area</a>
-      <a href="#prices">Prices</a>
-      <a href="#contacts">Contacts</a>
+      <a href="#life">The house</a>
+      <a href="#place">Around us</a>
+      <a href="#prices">Rates</a>
+      <a href="#contacts">Contact</a>
     </nav>
     <div class="langs"><a href="../" hreflang="ru" lang="ru" title="Русская версия">RU</a><b aria-current="page" title="English">EN</b></div>
-    <a class="btn btn--primary header__cta" href="#calc">Check free dates</a>
+    <a class="btn btn--primary header__cta" href="#dates">Choose dates<svg class="ico-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     <button class="burger" type="button" data-burger aria-label="Menu" aria-expanded="false" aria-controls="menu"><i></i><i></i></button>
   </div>
   <nav class="menu" id="menu" data-menu aria-label="Menu" hidden>
     <a href="#room">Rooms</a>
-    <a href="#life">House</a>
-    <a href="#place">Area</a>
-    <a href="#prices">Prices</a>
+    <a href="#life">The house</a>
+    <a href="#place">Around us</a>
+    <a href="#prices">Rates</a>
     <a href="#faq">FAQ</a>
-    <a href="#contacts">Contacts</a>
+    <a href="#contacts">Contact</a>
     <a href="../" hreflang="ru" lang="ru">Русская версия</a>
-    <a class="btn btn--primary" href="#calc">Check free dates</a>
+    <a class="btn btn--primary" href="#dates">Choose dates<svg class="ico-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </nav>
 </header>
 
 <main id="main">
 
 <!-- ============ HERO ============ -->
-<section class="hero" id="top" aria-label="Kholodnaya Rechka guest house">
-  <div class="hero__media">
-    <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="../assets/video/hero-poster.webp" data-hero-video aria-label="The sea at Kholodnaya Rechka">
-      <source src="../assets/video/hero.mp4" type="video/mp4">
-    </video>
-  </div>
-  <div class="hero__inner">
-    <div class="hero__copy">
-      <h1 class="h1"><span class="hero__eyebrow">Seaside guest house in Abkhazia · Bagripsh</span>Your balcony.<br>Your sea.</h1>
-      <p class="hero__lead">Four rooms with sea-view balconies.<br>Five minutes' walk to the beach.</p>
-      <p class="hero__price">From 3,500 ₽ <span>/ room per night</span><small>Up to 3 guests · price depends on dates · <a href="#prices">Prices by date</a></small></p>
-      <div class="hero__actions" data-hero-actions>
-        <a class="btn btn--primary" href="#calc">Check free dates</a>
-        <a class="link" href="#room">See the room</a>
-      </div>
+<section class="hero" id="top" aria-label="Kholodnaya Rechka Guest House">
+  <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="../assets/video/hero-poster.webp" data-hero-video aria-label="The sea at Kholodnaya Rechka">
+    <source src="../assets/video/hero.mp4" type="video/mp4">
+  </video>
+  <div class="hero__content">
+    <h1 class="h1"><span class="hero__kicker">Seaside guest house in Abkhazia · Bagripsh</span>Plans for today?<br><em>The sea.</em></h1>
+    <p class="hero__lead">Swim. Wander. Take your time.</p>
+    <div class="hero__actions">
+      <a class="btn btn--white" href="#dates">Choose dates<svg class="ico-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn--glass" href="#view" data-play-view><svg class="ico-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg>See the view</a>
     </div>
+    <ul class="perks" data-perks>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H10l-4.5 3.5V16H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span><b>Book direct</b>No middlemen</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11h18M5 11v4a5 5 0 0 0 5 5h4a5 5 0 0 0 5-5v-4M8.5 3.5c-.8 1 .8 2-.1 3.2M12 3.5c-.8 1 .8 2-.1 3.2M15.5 3.5c-.8 1 .8 2-.1 3.2"/></svg><span><b>Shared kitchen</b>Cook when it suits you</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9M9.5 4.5 12 7l2.5-2.5M9.5 19.5 12 17l2.5 2.5"/></svg><span><b>Air conditioning</b>In every room</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9.5 9.5 0 0 1 13 0M8.5 16a5 5 0 0 1 7 0M12 19.2h.01"/></svg><span><b>Wi‑Fi</b>Stay connected</span></li>
+    </ul>
   </div>
+  <p class="hero__note hand" aria-hidden="true">Room to breathe</p>
+  <button class="hero__pause" type="button" data-hero-pause aria-label="Pause video"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-pause" d="M8 5v14M16 5v14"/><path class="i-play" d="M8 5.5v13l10.5-6.5z"/></svg></button>
 </section>
 
-<!-- ============ BALCONY ============ -->
+<!-- ============ QUICK DATES ============ -->
+<section class="dates" id="dates" aria-label="Travel dates">
+  <form class="dates__card" data-quick novalidate>
+    <label class="qfield"><span>Check-in</span><input type="date" data-q-in aria-label="Check-in date"></label>
+    <label class="qfield"><span>Check-out</span><input type="date" data-q-out aria-label="Check-out date"></label>
+    <label class="qfield qfield--guests"><span>Guests</span>
+      <select data-q-guests>
+        <option value="1">1 guest</option>
+        <option value="2" selected>2 guests</option>
+        <option value="3">3 guests</option>
+        <option value="4">4 guests · 2 rooms</option>
+        <option value="5">5 guests · 2 rooms</option>
+        <option value="6">6 guests · 2 rooms</option>
+      </select>
+    </label>
+    <button class="btn btn--primary" type="submit">Calculate<svg class="ico-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+  </form>
+  <div class="dates__perks" data-perks-slot></div>
+</section>
+
+<!-- ============ VIEW ============ -->
 <section class="section balcony" id="view">
   <div class="container">
-    <div class="balcony__head reveal">
-      <h2 class="h2">The sea from your own balcony</h2>
-      <p class="lead">Every room has its own balcony overlooking the Black Sea.</p>
+    <div class="balcony__head">
+      <p class="eyebrow">The view</p>
+      <h2 class="h2">See what’s waiting</h2>
+      <p class="lead">Every room has its own balcony overlooking the Black Sea. Take it all in.</p>
     </div>
-    <figure class="balcony__frame reveal">
-      <video muted loop playsinline preload="none" poster="../assets/video/view-poster.webp" data-lazy-video aria-label="Balcony view: the sea and a palm tree">
+    <figure class="balcony__frame">
+      <video muted loop playsinline preload="none" poster="../assets/video/view-poster.webp" data-lazy-video data-view-video aria-label="Balcony view: the sea and a palm tree">
         <source data-src="../assets/video/view.mp4" type="video/mp4">
       </video>
     </figure>
@@ -280,9 +338,9 @@
 <section class="facts" aria-label="Key facts">
   <div class="container">
     <ul class="facts__list">
-      <li class="reveal"><b>4</b><span>rooms in the house — quiet and homely</span></li>
-      <li class="reveal"><b>3</b><span>guests per room, no more</span></li>
-      <li class="reveal"><b>5</b><span>minutes' walk to the beach</span></li>
+      <li><b>4</b><span>rooms in the house</span></li>
+      <li><b>3</b><span>guests per room — maximum</span></li>
+      <li><b>≈5</b><span>minutes on foot to the beach</span></li>
     </ul>
   </div>
 </section>
@@ -291,28 +349,29 @@
 <section class="section room" id="room">
   <div class="container room__grid">
     <div class="room__head">
-      <p class="eyebrow reveal">Room</p>
-      <h2 class="h2 reveal">Room with a sea-view balcony</h2>
-      <p class="lead reveal">Each room sleeps three — just right for a family or a group of friends. There are only four rooms in the house, so it is calm and homely.</p>
+      <p class="eyebrow">Your room</p>
+      <h2 class="h2">Unpack. Settle in. Relax.</h2>
+      <p class="lead">A double bed and a single bed: come as a couple, with a child, or with friends.</p>
     </div>
-    <div class="room__gallery reveal" data-gallery>
+    <div class="room__gallery" data-gallery>
       <div class="room__main" data-g-main role="button" tabindex="0" aria-label="Open the photo full screen"></div>
+      <span class="room__badge">Double + single bed</span>
       <p class="room__cap" data-g-cap aria-live="polite"></p>
       <div class="room__thumbs" data-g-thumbs></div>
     </div>
     <div class="room__info">
-      <ul class="amen reveal">
+      <ul class="amen">
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9M9.5 4.5 12 7l2.5-2.5M9.5 19.5 12 17l2.5 2.5"/></svg>Air conditioning</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9.5 9.5 0 0 1 13 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19.2" r="1.2"/></svg>Wi‑Fi</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg>TV</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V8a4 4 0 0 1 8 0M10 8h6M13 11v1M16 11v2M19 11v1M13 15v1M16 16v1M19 15v1"/></svg>Private bathroom with shower</li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 9.5a4.5 4.5 0 1 1-4.5-4.5H20v9H11.5M11 14l-2 7h3l2-7"/></svg>Hair dryer</li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21v-7M9.5 21v-7M14.5 21v-7M19 21v-7M3 14h18M8 9a4 4 0 0 1 8 0"/></svg>Sea-view balcony</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 9.5a4.5 4.5 0 1 1-4.5-4.5H20v9H11.5M11 14l-2 7h3l2-7"/></svg>Hairdryer</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1.5"/><path d="M12 3v18M10 10.5v3M14 10.5v3"/></svg>Wardrobe</li>
       </ul>
-      <p class="room__price reveal">from 3,500 ₽ <span>per room per night</span></p>
-      <div class="room__actions reveal">
-        <a class="btn btn--primary" href="#calc">Check free dates</a>
-        <a class="link" href="#prices">See seasonal prices</a>
+      <p class="room__price">From 3,500 ₽ <span>per room per night</span></p>
+      <div class="room__actions">
+        <a class="btn btn--primary" href="#calc">Calculate your stay<svg class="ico-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="link" href="#prices">Seasonal rates</a>
       </div>
     </div>
   </div>
@@ -321,55 +380,57 @@
 <!-- ============ LIFE ============ -->
 <section class="section life" id="life">
   <div class="container">
-    <div class="split reveal">
-      <h2 class="h2">Everything for a relaxed stay</h2>
-      <p class="lead">Cook in the shared kitchen or go down to the café with a barbecue on the ground floor. Meals are not included.</p>
-    </div>
-    <div class="life__photos">
-      <figure class="life__item life__item--wide reveal">
-        <div class="life__media">
-          <img width="800" height="800" src="../assets/img/terrace-sm.webp" srcset="../assets/img/terrace-sm.webp 800w, ../assets/img/terrace-lg.webp 1254w" sizes="(max-width: 900px) 92vw, 760px" alt="Terrace with a round window to the sea, blue benches and a table" loading="lazy">
-        </div>
-        <figcaption><b>Terrace with a round window to the sea</b>Blue benches, a table and a view of the palm and the sea — the place for evening tea after the beach.</figcaption>
+    <div class="life__top">
+      <figure class="life__photo">
+        <img width="800" height="800" src="../assets/img/terrace-sm.webp" srcset="../assets/img/terrace-sm.webp 800w, ../assets/img/terrace-lg.webp 1254w" sizes="(max-width: 900px) 92vw, 760px" alt="Terrace with a round window to the sea, blue benches and a table" loading="lazy">
       </figure>
-      <figure class="life__item reveal">
-        <div class="life__media"><img width="800" height="1200" src="../assets/img/kitchen-sm.webp" srcset="../assets/img/kitchen-sm.webp 800w, ../assets/img/kitchen-lg.webp 1254w" sizes="(max-width: 900px) 92vw, 40vw" alt="Shared kitchen with tables by the windows" loading="lazy"></div>
-        <figcaption><b>Shared kitchen</b>Fridges, a stove, a microwave, a kettle and dishes. Every room has its own table by the window.</figcaption>
-      </figure>
+      <div class="life__text">
+        <p class="eyebrow">Around the house</p>
+        <h2 class="h2">Is it time for tea yet?</h2>
+        <p class="lead">You set the schedule. There’s room for a cup of tea, a home-cooked dinner and everyday essentials between beach trips.</p>
+        <div class="life__terrace"><h3 class="h3">A terrace with a round window</h3><p>Blue benches, a palm tree and the sea in a circular frame. Just add a cup of tea.</p></div>
+        <p class="hand life__hand" aria-hidden="true">Tea, anyone?</p>
+      </div>
     </div>
-    <p class="life__note">Meals are paid separately.</p>
-    <ul class="life__more">
-      <li class="reveal"><b>Café with a barbecue</b><span>On the ground floor — for days when you don't feel like cooking.</span></li>
-      <li class="reveal"><b>Utility room</b><span>Washing machine, iron with an ironing board and a vacuum cleaner.</span></li>
-      <li class="reveal"><b>In the same building</b><span>A shop, a hairdresser and souvenirs.</span></li>
-    </ul>
+    <div class="life__cards">
+      <article class="card">
+        <div class="card__img"><img width="800" height="1200" src="../assets/img/kitchen-sm.webp" srcset="../assets/img/kitchen-sm.webp 800w, ../assets/img/kitchen-lg.webp 1254w" sizes="(max-width: 900px) 92vw, 440px" alt="Shared kitchen with tables by the windows" loading="lazy"></div>
+        <div class="card__body"><h3 class="h3">A kitchen for your recipes</h3><p>Fridges, a cooker, a microwave, a hot-water dispenser and cookware. Each room has its own table by the window.</p></div>
+      </article>
+      <article class="card card--text">
+        <div class="card__body"><span class="card__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10h16a8 8 0 0 1-16 0zM8.5 17.5 6.5 21M15.5 17.5l2 3.5M9 3.5c-.8 1 .8 2-.1 3.2M12 3.5c-.8 1 .8 2-.1 3.2M15 3.5c-.8 1 .8 2-.1 3.2"/></svg></span><h3 class="h3">When you’d rather not cook</h3><p>There’s a café-canteen with a charcoal grill on the ground floor. Meals are charged separately.</p></div>
+      </article>
+      <article class="card card--text">
+        <div class="card__body"><span class="card__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="13" r="4.5"/><path d="M7 6.5h2M14 6.5h3"/></svg></span><h3 class="h3">Laundry and ironing</h3><p>The utility room has a washing machine, an iron and a vacuum cleaner.</p></div>
+      </article>
+    </div>
+    <p class="life__shop"><b>Shops in the same building:</b> a grocery, a hairdresser and souvenirs.</p>
   </div>
 </section>
 
 <!-- ============ PLACE ============ -->
 <section class="section place" id="place">
-  <div class="container split reveal">
+  <div class="container split">
     <div>
-      <p class="eyebrow">The area</p>
-      <h2 class="h2">Between the mountains and the sea</h2>
+      <p class="eyebrow">Bagripsh · Kholodnaya Rechka</p>
+      <h2 class="h2">A greener side of Abkhazia</h2>
     </div>
     <div>
-      <p class="lead">Bagripsh, or Kholodnaya Rechka, is a village on the slope of the Gagra Range.</p>
-      <p>Subtropical greenery and cypresses all around. Magnolias bloom in spring and summer; in autumn tangerines and persimmons are sold right by the road.</p>
+      <p class="lead">The village sits on a slope of the Gagra Range, surrounded by subtropical greenery and cypresses. Magnolias bloom in spring and summer; autumn brings roadside stalls selling mandarins and persimmons.</p>
     </div>
   </div>
 
   <div class="container">
-    <figure class="panorama reveal">
-      <div class="panorama__img"><img width="1536" height="768" src="../assets/img/bagripsh-sea-lg.webp" srcset="../assets/img/bagripsh-sea-sm.webp 800w, ../assets/img/bagripsh-sea-lg.webp 1536w" sizes="(max-width: 900px) 100vw, 1320px" alt="Kholodnaya Rechka from the sea: the green slope of the Gagra Range runs down to the water" loading="lazy"></div>
-      <figcaption>Kholodnaya Rechka from the sea: the green slope of the Gagra Range runs right down to the water.
+    <figure class="panorama">
+      <div class="panorama__img"><img width="1536" height="768" src="../assets/img/bagripsh-sea-lg.webp" srcset="../assets/img/bagripsh-sea-sm.webp 800w, ../assets/img/bagripsh-sea-lg.webp 1536w" sizes="(max-width: 900px) 100vw, 1440px" alt="Kholodnaya Rechka from the sea: the green slope of the Gagra Range runs down to the water" loading="lazy"></div>
+      <figcaption>Kholodnaya Rechka seen from the sea
         <small class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:%D0%A5%D0%BE%D0%BB%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F_%D1%80%D0%B5%D1%87%D0%BA%D0%B0_-_panoramio_-_Fr0nt.jpg" target="_blank" rel="noopener">Fr0nt</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" target="_blank" rel="noopener">CC BY-SA 3.0</a>, Wikimedia Commons, retouched</small></figcaption>
     </figure>
   </div>
 
   <div class="hgallery" data-hgallery>
     <div class="container hgallery__bar">
-      <p class="hgallery__hint">Browse with the side arrows or swipe. Tap a photo to open it.</p>
+      <p class="hgallery__hint">Swipe or use the arrows. Tap a photo to enlarge it.</p>
     </div>
     <div class="hgallery__stage">
     <button class="hgallery__side hgallery__side--prev" type="button" data-hprev aria-label="Previous photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
@@ -382,19 +443,19 @@
         </figure>
         <figure class="hcard" data-full="../assets/img/beach-local-lg.webp" data-alt="The pebble beach of Kholodnaya Rechka">
           <div class="hcard__img"><img width="800" height="600" src="../assets/img/beach-local-sm.webp" alt="The pebble beach of Kholodnaya Rechka" loading="lazy"></div>
-          <figcaption>Kholodnaya Rechka beach <small class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Beach_-_panoramio_-_Fr0nt_(1).jpg" target="_blank" rel="noopener">Fr0nt</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" target="_blank" rel="noopener">CC BY-SA 3.0</a>, retouched</small></figcaption>
+          <figcaption>The pebble beach <small class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Beach_-_panoramio_-_Fr0nt_(1).jpg" target="_blank" rel="noopener">Fr0nt</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" target="_blank" rel="noopener">CC BY-SA 3.0</a>, retouched</small></figcaption>
         </figure>
         <figure class="hcard" data-full="../assets/img/morning-lg.webp" data-alt="A sunny morning on the balcony">
           <div class="hcard__img"><img width="800" height="1200" src="../assets/img/morning-sm.webp" alt="A sunny morning on the balcony" loading="lazy"></div>
-          <figcaption>Morning on the balcony</figcaption>
+          <figcaption>A slow morning</figcaption>
         </figure>
-        <figure class="hcard" data-full="../assets/img/road-lg.webp" data-alt="The road along the sea">
-          <div class="hcard__img"><img width="800" height="1200" src="../assets/img/road-sm.webp" alt="The road along the sea" loading="lazy"></div>
-          <figcaption>The road along the sea</figcaption>
+        <figure class="hcard" data-full="../assets/img/road-lg.webp" data-alt="The coastal road">
+          <div class="hcard__img"><img width="800" height="1200" src="../assets/img/road-sm.webp" alt="The coastal road" loading="lazy"></div>
+          <figcaption>The coastal road</figcaption>
         </figure>
         <figure class="hcard" data-full="../assets/img/gagra-lg.webp" data-alt="Old Gagra: green mountains above the sea">
           <div class="hcard__img"><img width="800" height="600" src="../assets/img/gagra-sm.webp" alt="Old Gagra: green mountains above the sea" loading="lazy"></div>
-          <figcaption>Old Gagra — 15 km <small class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:%D0%92%D0%B8%D0%B4_%D0%BD%D0%B0_%D0%A1%D1%82%D0%B0%D1%80%D1%83%D1%8E_%D0%93%D0%B0%D0%B3%D1%80%D1%83_%D1%81_%D0%BF%D1%80%D0%B8%D1%87%D0%B0%D0%BB%D0%B0._-_panoramio_(1).jpg" target="_blank" rel="noopener">Natalia Filatova</a>, <a href="https://creativecommons.org/licenses/by/3.0/deed.en" target="_blank" rel="noopener">CC BY 3.0</a>, retouched</small></figcaption>
+          <figcaption>Old Gagra <small class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:%D0%92%D0%B8%D0%B4_%D0%BD%D0%B0_%D0%A1%D1%82%D0%B0%D1%80%D1%83%D1%8E_%D0%93%D0%B0%D0%B3%D1%80%D1%83_%D1%81_%D0%BF%D1%80%D0%B8%D1%87%D0%B0%D0%BB%D0%B0._-_panoramio_(1).jpg" target="_blank" rel="noopener">Natalia Filatova</a>, <a href="https://creativecommons.org/licenses/by/3.0/deed.en" target="_blank" rel="noopener">CC BY 3.0</a>, retouched</small></figcaption>
         </figure>
         <figure class="hcard" data-full="../assets/img/magnolia-lg.webp" data-alt="A magnolia flower">
           <div class="hcard__img"><video muted playsinline preload="none" poster="../assets/video/magnolia-poster.webp" data-lazy-video data-once><source data-src="../assets/video/magnolia.mp4" type="video/mp4"></video></div>
@@ -402,15 +463,15 @@
         </figure>
         <figure class="hcard" data-full="../assets/img/market-lg.webp" data-alt="Tangerines, feijoa and flowers at a roadside stall">
           <div class="hcard__img"><img width="800" height="1200" src="../assets/img/market-sm.webp" alt="Tangerines, feijoa and flowers at a roadside stall" loading="lazy"></div>
-          <figcaption>Fruit right by the road</figcaption>
+          <figcaption>Roadside fruit</figcaption>
         </figure>
         <figure class="hcard" data-full="../assets/img/persimmons-lg.webp" data-alt="Persimmons ripening in the sun">
           <div class="hcard__img"><img width="800" height="1200" src="../assets/img/persimmons-sm.webp" alt="Persimmons ripening in the sun" loading="lazy"></div>
-          <figcaption>Persimmons ripening in the sun</figcaption>
+          <figcaption>Persimmons in the sun</figcaption>
         </figure>
-        <figure class="hcard" data-full="../assets/img/mandarins-lg.webp" data-alt="Ripe Abkhazian tangerines">
-          <div class="hcard__img"><img width="800" height="1200" src="../assets/img/mandarins-sm.webp" alt="Ripe Abkhazian tangerines" loading="lazy"></div>
-          <figcaption>Abkhazian tangerines</figcaption>
+        <figure class="hcard" data-full="../assets/img/mandarins-lg.webp" data-alt="Ripe Abkhazian mandarins">
+          <div class="hcard__img"><img width="800" height="1200" src="../assets/img/mandarins-sm.webp" alt="Ripe Abkhazian mandarins" loading="lazy"></div>
+          <figcaption>Abkhazian mandarins</figcaption>
         </figure>
       </div>
     </div>
@@ -423,15 +484,17 @@
 <section class="section route" id="route">
   <div class="container route__grid">
     <div class="route__text">
-      <h2 class="h2 reveal">Getting here</h2>
+      <p class="eyebrow">Getting here</p>
+      <h2 class="h2">Three steps to your stay</h2>
+      <p class="lead">Plan your journey via Adler and the Psou border crossing.</p>
       <ol class="steps">
-        <li class="reveal"><span>1</span><div><h3>Fly to Sochi (Adler)</h3><p>Adler airport and railway station are close to the border.</p></div></li>
-        <li class="reveal"><span>2</span><div><h3>Cross the border at Psou</h3><p>Russian citizens only need an internal passport.</p></div></li>
-        <li class="reveal"><span>3</span><div><h3>10 more km along the sea</h3><p>And you are in Kholodnaya Rechka. Central Gagra is 15 km away.</p></div></li>
+        <li><span>1</span><div><h3>Travel to Adler</h3><p>Fly to Sochi Airport or take a train to Adler station. Both are near the border.</p></div></li>
+        <li><span>2</span><div><h3>Cross the border at Psou</h3><p>Prepare your documents in advance — see the questions below.</p></div></li>
+        <li><span>3</span><div><h3>Another 10 km to Bagripsh</h3><p>Gagra town centre is 15 km from the village.</p></div></li>
       </ol>
-      <a class="link reveal" href="https://yandex.ru/maps/?um=constructor%3A4797ed7a1e0a8c85d76318c64fe9108c1502723730c366cc40352f549155dfad&amp;source=constructorLink" target="_blank" rel="noopener">Open the house on Yandex Maps</a>
+      <a class="btn btn--outline" href="https://yandex.ru/maps/?um=constructor%3A4797ed7a1e0a8c85d76318c64fe9108c1502723730c366cc40352f549155dfad&amp;source=constructorLink" target="_blank" rel="noopener">Open directions ↗</a>
     </div>
-    <figure class="map reveal">
+    <figure class="map">
       <svg viewBox="0 0 640 460" role="img" aria-label="Map: Adler, Psou border crossing, Kholodnaya Rechka, Gagra, Pitsunda, New Athos">
         <rect width="640" height="460" class="map__sea"/>
         <path class="map__land" d="M0 70C30 80 45 90 60 92S110 102 130 104S210 132 250 152S300 180 318 188S350 210 358 236S366 276 380 274S420 262 440 280S500 330 520 345S600 395 640 410V0H0Z"/>
@@ -445,7 +508,7 @@
         <g class="map__pt"><circle cx="520" cy="345" r="4"/><text x="420" y="382">New Athos</text></g>
         <text x="40" y="420" class="map__sm map__sealabel">Black Sea</text>
       </svg>
-      <figcaption>Not to scale.</figcaption>
+      <figcaption>Route diagram, not to scale</figcaption>
     </figure>
   </div>
 </section>
@@ -453,19 +516,20 @@
 <!-- ============ PRICES + CALC ============ -->
 <section class="section prices" id="prices">
   <div class="container">
-    <div class="prices__head reveal">
-      <h2 class="h2">Prices</h2>
-      <p class="lead">Price per room per night, up to three guests. Season from 1 May to 31 October.</p>
+    <div class="prices__head">
+      <p class="eyebrow">Dates &amp; rates</p>
+      <h2 class="h2">Put a price on your break</h2>
+      <p class="lead">Rates are per room, per night, for up to three guests. Our season runs from 1 May to 31 October.</p>
     </div>
     <ul class="seasons">
-      <li class="reveal" data-season><span>1 May — 15 June</span><b>3,500 ₽</b></li>
-      <li class="reveal" data-season><span>16 June — 15 September</span><b>4,000 ₽</b></li>
-      <li class="reveal" data-season><span>16 September — 31 October</span><b>3,500 ₽</b></li>
+      <li data-season><span>1 May — 15 June</span><b>3,500 ₽</b></li>
+      <li data-season><span>16 June — 15 September</span><b>4,000 ₽</b></li>
+      <li data-season><span>16 September — 31 October</span><b>3,500 ₽</b></li>
     </ul>
 
-    <div class="calc reveal" id="calc" data-calc>
+    <div class="calc" id="calc" data-calc>
       <form class="calc__form" onsubmit="return false" aria-label="Price calculator">
-        <h3 class="h3">Calculate the price</h3>
+        <h3 class="h3">Plan your stay</h3>
         <div class="calc__dates">
           <label class="field"><span>Check-in</span><input type="date" data-in required></label>
           <label class="field"><span>Check-out</span><input type="date" data-out required></label>
@@ -482,21 +546,21 @@
       </form>
       <div class="calc__result" aria-live="polite">
         <p class="calc__label">Your estimate</p>
-        <p class="calc__summary" data-summary>Choose your dates to see the price</p>
+        <p class="calc__summary" data-summary>Choose your dates to calculate the cost.</p>
         <p class="calc__total" data-total-wrap hidden><b data-total>0</b> ₽</p>
         <ul class="calc__breakdown" data-breakdown></ul>
         <p class="calc__warn" data-warn hidden></p>
-        <a class="btn btn--primary btn--block" data-wa href="#calc" target="_blank" rel="noopener">Check availability on WhatsApp</a>
-        <p class="calc__note">We will send your dates and the estimate. We confirm availability in the chat.</p>
-        <p class="calc__alt"><button type="button" class="link link--light" data-tg>Message on Telegram</button> · <a class="link link--light" href="tel:+79281536032">Call</a></p>
+        <a class="btn btn--lime btn--block" data-wa href="#calc" target="_blank" rel="noopener">Check availability on WhatsApp<svg class="ico-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <p class="calc__note">We’ll send your dates and estimate. We confirm room availability by message.</p>
+        <p class="calc__alt"><button type="button" class="link link--light" data-tg>Message on Telegram</button> · <a class="link link--light" href="tel:+79281536032">Call us</a></p>
       </div>
     </div>
 
     <ul class="terms">
       <li>Price per room per night, up to three guests</li>
-      <li>Meals are paid separately</li>
+      <li>Meals are charged separately</li>
       <li>Season: 1 May — 31 October</li>
-      <li>Prepayment and check-in times are agreed in the chat</li>
+      <li>Deposit, check-in and check-out are agreed by message</li>
     </ul>
   </div>
 </section>
@@ -504,19 +568,22 @@
 <!-- ============ FAQ ============ -->
 <section class="section faq" id="faq">
   <div class="container faq__grid">
-    <div class="faq__head reveal">
-      <h2 class="h2">Before you travel</h2>
-      <p>Can't find an answer? Message us on WhatsApp or Telegram and we will reply personally.</p>
+    <div class="faq__head">
+      <p class="eyebrow">Before you travel</p>
+      <h2 class="h2">A few more questions?</h2>
+      <p>If your question isn’t here, send us a message. We’ll reply personally.</p>
+      <a class="btn btn--primary" href="https://wa.me/79281536032?text=Hello!%20I%20have%20a%20question%20about%20Kholodnaya%20Rechka%20Guest%20House." target="_blank" rel="noopener">Ask a question<svg class="ico-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
     <div class="acc" data-acc>
-      <div class="acc__item"><button class="acc__q" type="button" aria-expanded="false">Where is the guest house?<i aria-hidden="true"></i></button><div class="acc__a"><div><p>In the village of Bagripsh (Kholodnaya Rechka), Gagra district, Abkhazia, on a hillside above the sea: 10 km from the Russian border at the Psou river and 15 km from central Gagra. Adler airport and railway station are just across the border.</p></div></div></div>
-      <div class="acc__item"><button class="acc__q" type="button" aria-expanded="false">Are meals included?<i aria-hidden="true"></i></button><div class="acc__a"><div><p>No. There is a café with a barbecue on the ground floor, and you can cook in the shared kitchen: fridges, a stove, a microwave, a kettle and dishes, with a table for every room.</p></div></div></div>
-      <div class="acc__item"><button class="acc__q" type="button" aria-expanded="false">How far is the sea?<i aria-hidden="true"></i></button><div class="acc__a"><div><p>About 5 minutes on foot: through the underpass below the road and you are on the beach. We will tell you the easiest way down with children or luggage.</p></div></div></div>
-      <div class="acc__item"><button class="acc__q" type="button" aria-expanded="false">Can I do laundry?<i aria-hidden="true"></i></button><div class="acc__a"><div><p>Yes, there is a utility room with a washing machine, an iron with an ironing board and a vacuum cleaner.</p></div></div></div>
-      <div class="acc__item"><button class="acc__q" type="button" aria-expanded="false">How do I book?<i aria-hidden="true"></i></button><div class="acc__a"><div><p>Choose your dates in the calculator and tap “Check availability on WhatsApp” — the message with your dates and estimate is written for you. We will reply and confirm a free room.</p></div></div></div>
-      <div class="acc__item"><button class="acc__q" type="button" aria-expanded="false">What are check-in and check-out times? Is prepayment required?<i aria-hidden="true"></i></button><div class="acc__a"><div><p>We agree check-in and check-out times and prepayment in the chat — just send us your dates.</p></div></div></div>
-      <div class="acc__item"><button class="acc__q" type="button" aria-expanded="false">What documents do I need to enter Abkhazia?<i aria-hidden="true"></i></button><div class="acc__a"><div><p>Russian citizens only need an internal passport. Rules for children and for citizens of other countries change — please check them before you travel.</p></div></div></div>
-      <div class="acc__item"><button class="acc__q" type="button" aria-expanded="false">What currency is used in Abkhazia?<i aria-hidden="true"></i></button><div class="acc__a"><div><p>The Russian rouble — bring roubles or a Russian bank card.</p></div></div></div>
+      <div class="acc__item"><button class="acc__q" type="button" aria-expanded="false">Where is the guest house?<i aria-hidden="true"></i></button><div class="acc__a"><div><p>In the village of Bagripsh (Kholodnaya Rechka), Gagra District, Abkhazia, on a hillside above the sea: 10 km from the Russian border at the Psou river and 15 km from central Gagra. <a href="#route">View directions →</a></p></div></div></div>
+      <div class="acc__item"><button class="acc__q" type="button" aria-expanded="false">How do I reach the beach?<i aria-hidden="true"></i></button><div class="acc__a"><div><p>About 5 minutes on foot through the pedestrian underpass beneath the road. The beach is pebbly.</p></div></div></div>
+      <div class="acc__item"><button class="acc__q" type="button" aria-expanded="false">How much is a room?<i aria-hidden="true"></i></button><div class="acc__a"><div><p>From 1 May to 15 June and from 16 September to 31 October — RUB 3,500 per room per night; from 16 June to 15 September — RUB 4,000. Up to three guests per room. <a href="#calc">Calculate your stay →</a></p></div></div></div>
+      <div class="acc__item"><button class="acc__q" type="button" aria-expanded="false">What about meals?<i aria-hidden="true"></i></button><div class="acc__a"><div><p>Meals are not included. There’s a café-canteen with a charcoal grill on the ground floor, and you can cook in the shared kitchen.</p></div></div></div>
+      <div class="acc__item"><button class="acc__q" type="button" aria-expanded="false">Can I do laundry?<i aria-hidden="true"></i></button><div class="acc__a"><div><p>Yes: the utility room has a washing machine, an iron and a vacuum cleaner.</p></div></div></div>
+      <div class="acc__item"><button class="acc__q" type="button" aria-expanded="false">How do I book?<i aria-hidden="true"></i></button><div class="acc__a"><div><p>Fill in the calculator and choose a messenger. It prepares a message with your dates and estimate — you just send it.</p></div></div></div>
+      <div class="acc__item"><button class="acc__q" type="button" aria-expanded="false">What are the check-in, check-out and deposit terms?<i aria-hidden="true"></i></button><div class="acc__a"><div><p>We’ll agree on arrival, departure and deposit arrangements by message.</p></div></div></div>
+      <div class="acc__item"><button class="acc__q" type="button" aria-expanded="false">Which travel documents do I need?<i aria-hidden="true"></i></button><div class="acc__a"><div><p>Russian citizens aged 14 and over may enter with a domestic passport. Check current requirements before travelling with children or if you hold another nationality. <a href="https://www.kdmid.ru/info-for-traveling-abroad/reference-information-for-traveling-abroad/procedure-of-entry-in-the-cis-countries-abkhazia-georgia-south-ossetia/" target="_blank" rel="noopener">Entry requirements ↗</a></p></div></div></div>
+      <div class="acc__item"><button class="acc__q" type="button" aria-expanded="false">Which currency are the rates in?<i aria-hidden="true"></i></button><div class="acc__a"><div><p>Russian roubles, the currency used for payments in Abkhazia.</p></div></div></div>
     </div>
   </div>
 </section>
@@ -524,22 +591,23 @@
 <!-- ============ CONTACTS ============ -->
 <section class="contacts" id="contacts">
   <div class="container">
-    <h2 class="contacts__title reveal">See you by the sea</h2>
-    <p class="contacts__lead reveal">Message us and we will find free dates for you.</p>
-    <div class="contacts__actions reveal">
-      <a class="btn btn--primary" href="https://wa.me/79281536032?text=Hello!%20I%20would%20like%20to%20ask%20about%20free%20rooms." target="_blank" rel="noopener">Message on WhatsApp</a>
-      <a class="link link--light" href="#calc">Calculate the price</a>
+    <p class="eyebrow eyebrow--light">Get in touch</p>
+    <h2 class="contacts__title">When will you come to the sea?</h2>
+    <p class="contacts__lead">Send us your travel dates and we’ll check availability.</p>
+    <div class="contacts__actions">
+      <a class="btn btn--lime" href="https://wa.me/79281536032?text=Hello!%20I%20have%20a%20question%20about%20Kholodnaya%20Rechka%20Guest%20House." target="_blank" rel="noopener">Message on WhatsApp<svg class="ico-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn--glass" href="https://t.me/Tanya_Tkachenko_0521" target="_blank" rel="noopener">Message on Telegram</a>
     </div>
-    <dl class="contacts__list reveal">
-      <div><dt>Phone and WhatsApp</dt><dd><a href="tel:+79281536032">+7 928 153-60-32</a></dd></div>
+    <dl class="contacts__list">
+      <div><dt>Phone &amp; WhatsApp</dt><dd><a href="tel:+79281536032">+7 928 153-60-32</a></dd></div>
       <div><dt>Telegram</dt><dd><a href="https://t.me/Tanya_Tkachenko_0521" target="_blank" rel="noopener">@Tanya_<wbr>Tkachenko_<wbr>0521</a></dd></div>
       <div><dt>Email</dt><dd><a href="mailto:Tank5673@mail.ru">Tank5673@mail.ru</a></dd></div>
-      <div><dt>Address</dt><dd>Bagripsh (Kholodnaya Rechka), Gagra district, Abkhazia<br><a class="link link--light" href="https://yandex.ru/maps/?um=constructor%3A4797ed7a1e0a8c85d76318c64fe9108c1502723730c366cc40352f549155dfad&amp;source=constructorLink" target="_blank" rel="noopener">Open on Yandex Maps</a></dd></div>
+      <div><dt>Address</dt><dd>Bagripsh (Kholodnaya Rechka), Gagra District, Abkhazia<br><a class="link link--light" href="https://yandex.ru/maps/?um=constructor%3A4797ed7a1e0a8c85d76318c64fe9108c1502723730c366cc40352f549155dfad&amp;source=constructorLink" target="_blank" rel="noopener">View on map ↗</a></dd></div>
     </dl>
   </div>
   <footer class="footer">
     <div class="container footer__in">
-      <span>Kholodnaya Rechka guest house — a seaside holiday in Abkhazia, booked directly with the hosts. Bagripsh, Gagra district · season 1 May — 31 October</span>
+      <span>Kholodnaya Rechka Guest House — a seaside stay in Abkhazia, booked directly with the hosts. Bagripsh, Gagra District · season 1 May — 31 October</span>
       <a href="../" hreflang="ru" lang="ru">Русский</a>
       <a href="https://instagram.com/tonika.tank7370" target="_blank" rel="noopener">Instagram</a>
       <a href="#top">Back to top ↑</a>
