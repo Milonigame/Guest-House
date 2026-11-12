@@ -324,10 +324,7 @@
           li.textContent = `${c} ${plural(c, 'ночь', 'ночи', 'ночей', 'night', 'nights')} × ${money(p)} ₽` + (rooms > 1 ? ` × ${r}` : '');
           brEl.append(li);
         });
-        if (off) {
-          warnEl.hidden = false;
-          warnEl.textContent = `${off} ${plural(off, 'ночь', 'ночи', 'ночей', 'night', 'nights')} ` + L('вне сезона (мы принимаем гостей с 1 мая по 31 октября) — их не посчитали. Напишите нам, уточним.', 'fall outside the season (we host guests from 1 May to 31 October) and are not counted. Message us and we will help.');
-        }
+        if (off) { total = 0; brEl.innerHTML = ''; }   // no listed price for these dates: no sum, the guest just sends the dates
         ready = true;
         msg = [
           L('Здравствуйте! Хочу уточнить наличие свободного номера в гостевом доме «Холодная речка».', 'Hello! I would like to check availability at the Kholodnaya Rechka guest house.'),
