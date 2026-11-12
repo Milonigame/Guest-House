@@ -1,4 +1,4 @@
-/* Холодная речка — интерактив без библиотек. Контент виден и без JS. */
+/* Холодная речка — интерактив без библиотек. Контент виден и без JS. Один скрипт для русской и английской страниц. */
 (() => {
   'use strict';
 
@@ -11,15 +11,19 @@
   const body = document.body;
   const PHONE = '79281536032';
   const TG = 'Tanya_Tkachenko_0521';
-  const img = (n, size) => `assets/img/${n}-${size}.webp`;
-  const plural = (n, one, few, many) => {
+  const EN = document.documentElement.lang === 'en';
+  const L = (ru, en) => (EN ? en : ru);
+  const BASE = EN ? '../' : '';
+  const img = (n, size) => `${BASE}assets/img/${n}-${size}.webp`;
+  const plural = (n, one, few, many, en1, enN) => {
+    if (EN) return n === 1 ? en1 : enN;
     const a = Math.abs(n) % 100, b = a % 10;
     if (a > 10 && a < 20) return many;
     if (b > 1 && b < 5) return few;
     if (b === 1) return one;
     return many;
   };
-  const money = n => Math.round(n).toLocaleString('ru-RU').replace(/\s/g, ' ');
+  const money = n => Math.round(n).toLocaleString(EN ? 'en-US' : 'ru-RU').replace(/\s/g, ' ');
 
   /* ================= toast ================= */
   const toastEl = $('[data-toast]');
@@ -117,7 +121,7 @@
     return {
       open(list, k, label, cb) {
         items = list; onClose = cb || null; last = document.activeElement;
-        lb.setAttribute('aria-label', label || 'Фотографии');
+        lb.setAttribute('aria-label', label || L('Фотографии', 'Photos'));
         lb.hidden = false; requestAnimationFrame(() => lb.classList.add('open'));
         body.style.overflow = 'hidden'; body.classList.add('lb-open');
         show(k);
@@ -128,11 +132,11 @@
 
   /* ================= room gallery ================= */
   const SLIDES = [
-    { name: 'room-1', tag: 'Номер', alt: 'Номер с двуспальной и отдельной кроватями', cap: 'Двуспальная и отдельная кровати — места для троих' },
-    { name: 'room-4', tag: 'Балкон', alt: 'Номер с выходом на балкон', cap: 'Выход на балкон, кондиционер, телевизор и столик' },
-    { name: 'room-2', tag: 'Шкаф и ТВ', alt: 'Шкаф, телевизор и тумба в номере', cap: 'Шкаф для одежды, телевизор и тумба с полками' },
-    { name: 'bath', tag: 'Санузел', alt: 'Санузел с душем в номере', cap: 'Свой санузел с душем и феном — в номере' },
-    { name: 'view', tag: 'Вид', alt: 'Вид с балкона на море и пальму', cap: 'Вид с балкона номера: море и пальма' },
+    { name: 'room-1', tag: L('Номер', 'Room'), alt: L('Номер с двуспальной и отдельной кроватями', 'Room with a double and a single bed'), cap: L('Двуспальная и отдельная кровати — места для троих', 'A double and a single bed: room for three') },
+    { name: 'room-4', tag: L('Балкон', 'Balcony'), alt: L('Номер с выходом на балкон', 'Room with a door to the balcony'), cap: L('Выход на балкон, кондиционер, телевизор и столик', 'Balcony door, air conditioning, TV and a table') },
+    { name: 'room-2', tag: L('Шкаф и ТВ', 'Wardrobe & TV'), alt: L('Шкаф, телевизор и тумба в номере', 'Wardrobe, TV and a cabinet in the room'), cap: L('Шкаф для одежды, телевизор и тумба с полками', 'Wardrobe, TV and a cabinet with shelves') },
+    { name: 'bath', tag: L('Санузел', 'Bathroom'), alt: L('Санузел с душем в номере', 'Private bathroom with a shower'), cap: L('Свой санузел с душем и феном — в номере', 'Private bathroom with a shower and a hair dryer') },
+    { name: 'view', tag: L('Вид', 'View'), alt: L('Вид с балкона на море и пальму', 'View from the balcony: the sea and a palm tree'), cap: L('Вид с балкона номера: море и пальма', 'View from the room balcony: the sea and a palm tree') },
   ];
   const gal = $('[data-gallery]');
   if (gal) {
@@ -149,7 +153,7 @@
     const thumbs = SLIDES.map((s, k) => {
       const b = document.createElement('button');
       b.type = 'button';
-      b.setAttribute('aria-label', 'Фото ' + (k + 1) + ': ' + s.tag);
+      b.setAttribute('aria-label', L('Фото ', 'Photo ') + (k + 1) + ': ' + s.tag);
       b.innerHTML = `<img src="${img(s.name, 'sm')}" alt="" loading="lazy"><span>${s.tag}</span>`;
       b.addEventListener('click', () => go(k));
       thumbsEl.append(b); return b;
@@ -164,7 +168,7 @@
       cur = k;
     }
     go(0);
-    const open = () => LB.open(SLIDES.map(x => ({ src: img(x.name, 'lg'), alt: x.alt })), cur, 'Фотографии номера', i => {});
+    const open = () => LB.open(SLIDES.map(x => ({ src: img(x.name, 'lg'), alt: x.alt })), cur, L('Фотографии номера', 'Room photos'), i => {});
     let px = null, py = null, moved = false;
     main.addEventListener('pointerdown', e => { px = e.clientX; py = e.clientY; moved = false; });
     main.addEventListener('pointerup', e => {
@@ -207,8 +211,8 @@
     addEventListener('resize', ui); addEventListener('load', ui); ui();
     figs.forEach((f, k) => {
       f.tabIndex = 0; f.setAttribute('role', 'button');
-      f.setAttribute('aria-label', 'Открыть фото: ' + f.dataset.alt);
-      const open = () => LB.open(items, k, 'Фотографии окрестностей');
+      f.setAttribute('aria-label', L('Открыть фото: ', 'Open photo: ') + f.dataset.alt);
+      const open = () => LB.open(items, k, L('Фотографии окрестностей', 'Photos of the area'));
       f.addEventListener('click', e => { if (e.target.closest('a')) return; open(); });
       f.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
     });
@@ -231,8 +235,8 @@
   };
   const iso = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
   const parse = v => { if (!v) return null; const [y, m, d] = v.split('-').map(Number); return new Date(y, m - 1, d); };
-  const ru = d => d.toLocaleDateString('ru-RU', { day: 'numeric', month: 'long' });
-  const dots = d => d.toLocaleDateString('ru-RU');
+  const ru = d => d.toLocaleDateString(EN ? 'en-GB' : 'ru-RU', { day: 'numeric', month: 'long' });
+  const dots = d => d.toLocaleDateString(EN ? 'en-GB' : 'ru-RU');
   const today = new Date(); today.setHours(0, 0, 0, 0);
 
   const calc = $('[data-calc]');
@@ -249,16 +253,16 @@
       const din = parse(inEl.value), dout = parse(outEl.value);
       const rooms = Math.ceil(guests / 3);
       const name = nameEl.value.trim();
-      const g = `${guests} ${plural(guests, 'гость', 'гостя', 'гостей')}`;
-      const r = `${rooms} ${plural(rooms, 'номер', 'номера', 'номеров')}`;
+      const g = `${guests} ${plural(guests, 'гость', 'гостя', 'гостей', 'guest', 'guests')}`;
+      const r = `${rooms} ${plural(rooms, 'номер', 'номера', 'номеров', 'room', 'rooms')}`;
       warnEl.hidden = true; brEl.innerHTML = ''; ready = false;
       seasonCards.forEach(c => c.classList.remove('active'));
       let total = 0;
       if (!din || !dout) {
-        sumEl.textContent = 'Выберите даты — покажем стоимость';
+        sumEl.textContent = L('Выберите даты — покажем стоимость', 'Choose your dates to see the price');
       } else if (dout <= din) {
-        sumEl.textContent = 'Проверьте даты';
-        warnEl.hidden = false; warnEl.textContent = 'Дата выезда должна быть позже даты заезда.';
+        sumEl.textContent = L('Проверьте даты', 'Check the dates');
+        warnEl.hidden = false; warnEl.textContent = L('Дата выезда должна быть позже даты заезда.', 'Check-out must be after check-in.');
       } else {
         const groups = new Map(), used = new Set(); let nights = 0, off = 0;
         for (let d = new Date(din); d < dout; d.setDate(d.getDate() + 1)) {
@@ -270,25 +274,25 @@
           total += p * rooms;
         }
         used.forEach(k => seasonCards[k] && seasonCards[k].classList.add('active'));
-        const n = `${nights} ${plural(nights, 'ночь', 'ночи', 'ночей')}`;
+        const n = `${nights} ${plural(nights, 'ночь', 'ночи', 'ночей', 'night', 'nights')}`;
         sumEl.textContent = `${ru(din)} — ${ru(dout)} · ${n} · ${g}` + (rooms > 1 ? ` · ${r}` : '');
         [...groups.entries()].sort((a, b) => a[0] - b[0]).forEach(([p, c]) => {
           const li = document.createElement('li');
-          li.textContent = `${c} ${plural(c, 'ночь', 'ночи', 'ночей')} × ${money(p)} ₽` + (rooms > 1 ? ` × ${r}` : '');
+          li.textContent = `${c} ${plural(c, 'ночь', 'ночи', 'ночей', 'night', 'nights')} × ${money(p)} ₽` + (rooms > 1 ? ` × ${r}` : '');
           brEl.append(li);
         });
         if (off) {
           warnEl.hidden = false;
-          warnEl.textContent = `${off} ${plural(off, 'ночь', 'ночи', 'ночей')} вне сезона (мы принимаем гостей с 1 мая по 31 октября) — их не посчитали. Напишите нам, уточним.`;
+          warnEl.textContent = `${off} ${plural(off, 'ночь', 'ночи', 'ночей', 'night', 'nights')} ` + L('вне сезона (мы принимаем гостей с 1 мая по 31 октября) — их не посчитали. Напишите нам, уточним.', 'fall outside the season (we host guests from 1 May to 31 October) and are not counted. Message us and we will help.');
         }
         ready = true;
         msg = [
-          'Здравствуйте! Хочу уточнить наличие свободного номера в гостевом доме «Холодная речка».',
-          `Заезд: ${dots(din)}, выезд: ${dots(dout)} — ${n}.`,
-          `Гостей: ${guests} (${r}).`,
-          total ? `Расчёт на сайте: ${money(total)} ₽.` : '',
-          name ? `Меня зовут ${name}.` : '',
-          'Есть ли свободные номера на эти даты?',
+          L('Здравствуйте! Хочу уточнить наличие свободного номера в гостевом доме «Холодная речка».', 'Hello! I would like to check availability at the Kholodnaya Rechka guest house.'),
+          L(`Заезд: ${dots(din)}, выезд: ${dots(dout)} — ${n}.`, `Check-in: ${dots(din)}, check-out: ${dots(dout)} — ${n}.`),
+          L(`Гостей: ${guests} (${r}).`, `Guests: ${guests} (${r}).`),
+          total ? L(`Расчёт на сайте: ${money(total)} ₽.`, `Price from the website: ${money(total)} RUB.`) : '',
+          name ? L(`Меня зовут ${name}.`, `My name is ${name}.`) : '',
+          L('Есть ли свободные номера на эти даты?', 'Is a room available for these dates?'),
         ].filter(Boolean).join('\n');
       }
       totalWrap.hidden = !total;
@@ -299,7 +303,7 @@
     wa.addEventListener('click', e => {
       if (ready) return;
       e.preventDefault();
-      toast('Сначала выберите даты заезда и выезда');
+      toast(L('Сначала выберите даты заезда и выезда', 'Please choose check-in and check-out dates first'));
       (inEl.value ? outEl : inEl).focus();
       try { (inEl.value ? outEl : inEl).showPicker(); } catch (err) { /* not supported */ }
     });
@@ -319,10 +323,10 @@
       guestsEl.textContent = guests; compute();
     }));
     tg.addEventListener('click', async () => {
-      const text = ready ? msg : 'Здравствуйте! Хочу узнать о свободных номерах в гостевом доме «Холодная речка».';
+      const text = ready ? msg : L('Здравствуйте! Хочу узнать о свободных номерах в гостевом доме «Холодная речка».', 'Hello! I would like to ask about free rooms at the Kholodnaya Rechka guest house.');
       let ok = false;
       try { await navigator.clipboard.writeText(text); ok = true; } catch (e) { /* no clipboard */ }
-      toast(ok ? 'Текст сообщения скопирован — вставьте его в чат Telegram' : 'Напишите нам в Telegram: @' + TG);
+      toast(ok ? L('Текст сообщения скопирован — вставьте его в чат Telegram', 'Message copied — paste it into the Telegram chat') : L('Напишите нам в Telegram: @', 'Message us on Telegram: @') + TG);
       setTimeout(() => window.open('https://t.me/' + TG, '_blank', 'noopener'), ok ? 650 : 900);
     });
     compute();
